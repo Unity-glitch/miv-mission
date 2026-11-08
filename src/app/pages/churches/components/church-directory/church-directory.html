@@ -1,0 +1,96 @@
+<section class="church-directory-section">
+  <div class="directory-container">
+    <div class="directory-heading">
+      <span class="section-label" appScrollReveal>
+        <span></span>
+        EXPLORE OUR NETWORK
+        <span></span>
+      </span>
+
+      <h2 appScrollReveal>
+        Find a Church.
+        <span>Be Part of the Mission.</span>
+      </h2>
+
+      <p appScrollReveal>
+        Explore churches across different communities and discover where faith, fellowship and the
+        work of the Gospel are growing.
+      </p>
+    </div>
+
+    <div class="filter-container" appScrollReveal>
+      <div class="search-box">
+        <span class="search-icon">⌕</span>
+        <input type="text" placeholder="Search church or location..." [(ngModel)]="searchTerm" />
+      </div>
+
+      <select [(ngModel)]="selectedCountry">
+        <option value="">All Countries</option>
+        @for (country of countries; track country) {
+          <option [value]="country">{{ country }}</option>
+        }
+      </select>
+
+      <select [(ngModel)]="selectedStatus">
+        <option value="">All Statuses</option>
+        <option value="Active">Active</option>
+        <option value="Planted">Planted</option>
+        <option value="Planned">Planned</option>
+      </select>
+
+      <button type="button" class="clear-btn" (click)="clearFilters()">Clear Filters</button>
+    </div>
+
+    <div class="results-info">
+      <p>
+        Showing <strong>{{ filteredChurches.length }}</strong>
+        {{ filteredChurches.length === 1 ? 'church' : 'churches' }}
+      </p>
+    </div>
+
+    <div class="church-grid">
+      @for (church of filteredChurches; track church.id) {
+        <article class="church-card" appScrollReveal>
+          <div class="church-image">
+            <img [src]="church.image" [alt]="church.name" />
+
+            <span
+              class="church-status"
+              [class.active]="church.status === 'Active'"
+              [class.planted]="church.status === 'Planted'"
+              [class.planned]="church.status === 'Planned'"
+            >
+              {{ church.status }}
+            </span>
+          </div>
+
+          <div class="church-card-content">
+            <span class="church-location">
+              <span>⌖</span>
+              {{ church.city }}, {{ church.country }}
+            </span>
+
+            <h3>{{ church.name }}</h3>
+
+            <p>{{ church.description }}</p>
+
+            <a [routerLink]="['/churches', church.id]" class="view-church-btn">
+              View Church
+            </a>
+          </div>
+        </article>
+      } @empty {
+        <div class="empty-state">
+          <div class="empty-icon">⌕</div>
+          <h3>No Churches Found</h3>
+          <p>
+            We couldn't find any churches matching your search or filters. Try changing your search
+            criteria.
+          </p>
+
+          <button type="button" (click)="clearFilters()">Clear Filters</button>
+        </div>
+      }
+    </div>
+  </div>
+</section>
