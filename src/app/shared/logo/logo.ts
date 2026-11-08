@@ -10,5 +10,6 @@ import { RouterLink } from '@angular/router';
 export class Logo {
   @Input() width = '48px';
   @Input() height = '48px';
-  @Input() showText = true;
+  @Input() showBlueText = true;
+  @Input() showWhiteText = false;
 }

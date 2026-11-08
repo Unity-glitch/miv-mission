@@ -1,0 +1,252 @@
+.get-involved-section {
+  padding: 110px 7%;
+  background: var(--white);
+  overflow: hidden;
+}
+
+.involved-container {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.involved-heading {
+  max-width: 720px;
+  text-align: center;
+  margin: 0 auto 55px;
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--primary-color);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.section-label span {
+  width: 30px;
+  height: 2px;
+  background: var(--secondary-color);
+}
+
+.involved-heading h2 {
+  font-family: 'montserrat', sans-serif;
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.3;
+  color: var(--text-color);
+  margin-bottom: 18px;
+}
+
+.involved-heading h2 span {
+  display: block;
+  color: var(--primary-color);
+}
+
+.involved-heading p {
+  color: var(--text-color-secondary);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.involved-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.involved-card {
+  padding: 35px 28px;
+  border: 1px solid rgba(49, 126, 61, 0.12);
+  border-radius: 10px;
+  background: var(--white);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.involved-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
+}
+
+.involved-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-color-light);
+  margin-bottom: 25px;
+}
+
+.involved-card:nth-child(2) .involved-icon {
+  background: #fff3e4;
+}
+
+.involved-icon svg {
+  width: 29px;
+  height: 29px;
+  stroke: var(--primary-color);
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.involved-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 13px;
+}
+
+.involved-card p {
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--text-color-secondary);
+  margin-bottom: 22px;
+}
+
+.involved-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--primary-color);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: gap 0.3s ease;
+}
+
+.involved-card a:hover {
+  gap: 18px;
+}
+
+.involved-card a span {
+  font-size: 18px;
+  color: var(--secondary-color);
+}
+
+.involved-cta {
+  margin-top: 55px;
+  padding: 35px 40px;
+  border-radius: 10px;
+  background: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.involved-cta h3 {
+  color: var(--white);
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+.involved-cta p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.involved-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 15px 23px;
+  background: var(--secondary-color);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.involved-btn:hover {
+  background: #df8110;
+  transform: translateY(-3px);
+}
+
+.involved-btn span {
+  font-size: 18px;
+}
+
+@media (max-width: 992px) {
+  .involved-section {
+    padding: 90px 5%;
+  }
+
+  .involved-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .involved-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .get-involved-section {
+    padding: 90px 5%;
+  }
+
+  .involved-heading {
+    margin-bottom: 35px;
+  }
+
+  .involved-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .involved-card:last-child {
+    grid-column: auto;
+  }
+
+  .involved-card {
+    padding: 28px 23px;
+  }
+
+  .involved-cta {
+    padding: 28px 23px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 35px;
+  }
+
+  .involved-cta h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+  .involved-cta p{
+    text-align: center;
+  }
+
+
+  .involved-btn {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .involved-card,
+  .involved-card a,
+  .involved-btn {
+    transition: none;
+  }
+
+  .involved-card:hover,
+  .involved-btn:hover {
+    transform: none;
+  }
+}

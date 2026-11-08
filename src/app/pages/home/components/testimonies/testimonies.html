@@ -1,0 +1,61 @@
+<section class="testimonies-section">
+  <div class="testimonies-container">
+    <div class="testimonies-heading">
+      <div class="section-label" appScrollReveal>
+        <span></span>
+        STORIES OF TRANSFORMATION
+        <span></span>
+      </div>
+
+      <h2 appScrollReveal>
+        Lives Touched.
+        <span>Hope Restored.</span>
+      </h2>
+
+      <p appScrollReveal>
+        Every life reached is a reminder of God's love at work. Discover the impact of faith,
+        service and the Gospel.
+      </p>
+    </div>
+
+    <div class="testimonies-grid">
+      @for (testimony of testimonies; track testimony.name) {
+        <article class="testimony-card" appScrollReveal>
+          <div class="quote-mark">“</div>
+
+          <div class="testimony-stars" aria-label="Testimony highlight">
+            <span>✦</span>
+            <span>✦</span>
+            <span>✦</span>
+            <span>✦</span>
+            <span>✦</span>
+          </div>
+
+          <p class="testimony-message">
+            {{ testimony.message }}
+          </p>
+
+          <div class="testimony-person">
+            <div class="person-avatar">
+              {{ testimony.initial }}
+            </div>
+
+            <div>
+              <h3>{{ testimony.name }}</h3>
+              <span>{{ testimony.role }}</span>
+            </div>
+          </div>
+        </article>
+      }
+    </div>
+
+    <div class="testimonies-footer" appScrollReveal>
+      <p>Has God done something wonderful in your life? We'd love to hear your story.</p>
+
+      <a routerLink="/contact" class="testimony-btn">
+        Share Your Story
+        <span>→</span>
+      </a>
+    </div>
+  </div>
+</section>

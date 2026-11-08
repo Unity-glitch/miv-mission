@@ -1,0 +1,90 @@
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-main">
+      <div class="footer-about">
+        <a appScrollReveal routerLink="/" class="footer-logo">
+          <app-logo
+            [showBlueText]="false"
+            [showWhiteText]="true"
+            [width]="'50px'"
+            [height]="'50px'"
+          ></app-logo>
+        </a>
+
+        <p appScrollReveal>
+          MIV Mission is committed to taking the Gospel beyond boundaries, reaching souls and
+          transforming lives through the love of Jesus Christ.
+        </p>
+
+        <div appScrollReveal class="footer-socials">
+          <a href="#" aria-label="Facebook">
+            <i class="social-icon">f</i>
+          </a>
+
+          <a href="#" aria-label="Instagram">
+            <i class="social-icon">◎</i>
+          </a>
+
+          <a href="#" aria-label="YouTube">
+            <i class="social-icon">▶</i>
+          </a>
+
+          <a href="#" aria-label="X">
+            <i class="social-icon">𝕏</i>
+          </a>
+        </div>
+      </div>
+
+      <div appScrollReveal class="footer-links">
+        <h3>Quick Links</h3>
+
+        <ul>
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/about">About Us</a></li>
+          <li><a routerLink="/mission">Our Mission</a></li>
+          <li><a routerLink="/churches">Churches</a></li>
+          <li><a routerLink="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div appScrollReveal class="footer-links">
+        <h3>Our Work</h3>
+
+        <ul>
+          <li><a routerLink="/mission">Evangelism</a></li>
+          <li><a routerLink="/mission">Discipleship</a></li>
+          <li><a routerLink="/churches">Church Planting</a></li>
+          <li><a routerLink="/mission">Community Outreach</a></li>
+          <li><a routerLink="/mission">Missionary Support</a></li>
+        </ul>
+      </div>
+
+      <div appScrollReveal class="footer-contact">
+        <h3>Get In Touch</h3>
+
+        <p>
+          <span class="contact-icon">✉</span>
+          <a href="mailto:info@mivmission.org">info@mivmission.org</a>
+        </p>
+
+        <p>
+          <span class="contact-icon">☎</span>
+          <a href="tel:+2340000000000">Contact us by phone</a>
+        </p>
+
+        <p>
+          <span class="contact-icon">⌖</span>
+          <span>Connect with us to learn more about our mission.</span>
+        </p>
+
+        <a routerLink="/contact" class="footer-contact-btn"> Contact Us <span>→</span> </a>
+      </div>
+    </div>
+
+    <div appScrollReveal class="footer-bottom">
+      <p>© {{ currentYear }} MIV Mission. All rights reserved.</p>
+
+      <p class="footer-bottom-text">Taking the Gospel Beyond Boundaries.</p>
+    </div>
+  </div>
+</footer>
