@@ -1,0 +1,148 @@
+.about-founder {
+  padding: 100px 6%;
+  background: #f6f6f6;
+}
+
+.about-founder__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 75px;
+}
+
+.about-founder__image {
+  position: relative;
+  height: 520px;
+}
+
+.about-founder__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 12px;
+}
+
+.about-founder__image-label {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  padding: 20px 24px;
+  background: var(--primary-color);
+  border-radius: 8px;
+}
+
+.about-founder__image-label span {
+  color: #f3951f;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.about-founder__image-label h3 {
+  margin: 7px 0 0;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.section-label {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #317e3d;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.about-founder__content h2 {
+  margin: 0 0 22px;
+  color: #343639;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(28px, 3.2vw, 42px);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.about-founder__content h2 span {
+  display: block;
+  color: #317e3d;
+}
+
+.about-founder__content > p {
+  margin: 0 0 16px;
+  color: #666;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.about-founder__content .founder-intro {
+  color: #444;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.founder-quote {
+  position: relative;
+  margin-top: 30px;
+  padding: 25px 25px 25px 55px;
+  background: #fff;
+  border-left: 4px solid #f3951f;
+  border-radius: 6px;
+}
+
+.quote-icon {
+  position: absolute;
+  top: 10px;
+  left: 18px;
+  color: #317e3d;
+  font-family: Georgia, serif;
+  font-size: 42px;
+  line-height: 1;
+}
+
+.founder-quote p {
+  margin: 0;
+  color: #555;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-style: italic;
+  line-height: 1.9;
+}
+
+@media (max-width: 900px) {
+  .about-founder__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+
+  .about-founder__image {
+    height: 460px;
+  }
+}
+
+@media (max-width: 700px) {
+  .about-founder {
+    padding: 70px 5%;
+  }
+
+  .about-founder__container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .about-founder__image {
+    height: 380px;
+  }
+
+  .about-founder__content h2 {
+    font-size: 30px;
+  }
+}

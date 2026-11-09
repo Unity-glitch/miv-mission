@@ -1,0 +1,152 @@
+.directorate {
+  padding: 100px 6%;
+  background: #fff;
+}
+
+.directorate__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.directorate__heading {
+  max-width: 650px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.section-label {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #317e3d;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.directorate__heading h2 {
+  margin: 0 0 18px;
+  color: #343639;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.directorate__heading h2 span {
+  color: #317e3d;
+}
+
+.directorate__heading p {
+  margin: 0;
+  color: #666;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.directorate__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.director-card {
+  overflow: hidden;
+  background: #f6f6f6;
+  border-radius: 10px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.director-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
+}
+
+.director-card__image {
+  height: 340px;
+  overflow: hidden;
+  background: #eaf5eb;
+}
+
+.director-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.5s ease;
+}
+
+.director-card:hover .director-card__image img {
+  transform: scale(1.05);
+}
+
+.director-card__info {
+  padding: 25px;
+}
+
+.director-card__line {
+  display: block;
+  width: 35px;
+  height: 3px;
+  margin-bottom: 15px;
+  background: #f3951f;
+}
+
+.director-card__info h3 {
+  margin: 0 0 8px;
+  color: #343639;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.director-card__info p {
+  margin: 0;
+  color: #317e3d;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .directorate__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .directorate {
+    padding: 70px 5%;
+  }
+
+  .directorate__heading {
+    margin-bottom: 35px;
+  }
+
+  .directorate__grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .director-card__image {
+    height: 380px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .director-card,
+  .director-card__image img {
+    transition: none;
+  }
+
+  .director-card:hover {
+    transform: none;
+  }
+
+  .director-card:hover .director-card__image img {
+    transform: none;
+  }
+}

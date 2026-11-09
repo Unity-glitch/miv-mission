@@ -1,0 +1,123 @@
+.about-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 540px;
+  padding: 120px 7% 30px;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10, 30, 17, 0.9) 0%,
+      rgba(10, 30, 17, 0.75) 55%,
+      rgba(10, 30, 17, 0.4) 100%
+    ),
+    url('/images/about-hero.jpg') center/cover no-repeat;
+  color: var(--white);
+}
+
+.about-hero-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.about-hero-content {
+  max-width: 760px;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.section-label span {
+  width: 30px;
+  height: 2px;
+  background: var(--secondary-color);
+}
+
+.about-hero-content h1 {
+  margin-bottom: 22px;
+  color: var(--white);
+  font-family: 'montserrat', sans-serif;
+  font-size: clamp(35px, 5vw, 58px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.about-hero-content h1 span {
+  display: block;
+  color: var(--secondary-color);
+}
+
+.about-hero-content p {
+  max-width: 650px;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.about-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 15px 25px;
+  border-radius: 4px;
+  background: var(--primary-color);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.about-hero-btn:hover {
+  background: var(--hover-color-dark);
+  transform: translateY(-3px);
+}
+
+.about-hero-btn span {
+  font-size: 19px;
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    min-height: 480px;
+    padding: 100px 6% 30px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    min-height: 450px;
+    padding: 100px 5% 30px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 32px;
+  }
+
+  .about-hero-content p {
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-hero-btn {
+    transition: none;
+  }
+}

@@ -1,0 +1,33 @@
+<section class="directorate">
+  <div class="directorate__container">
+    <div class="directorate__heading" appScrollReveal>
+      <span class="section-label">OUR LEADERSHIP</span>
+
+      <h2>
+        Meet Our
+        <span>Directorate Team</span>
+      </h2>
+
+      <p>
+        Our directorate team provides leadership, guidance and coordination in advancing the vision
+        and mission of MIV Mission.
+      </p>
+    </div>
+
+    <div class="directorate__grid">
+      @for (director of directors; track director.name + director.image) {
+        <article class="director-card" appScrollReveal>
+          <div class="director-card__image">
+            <img [src]="director.image" [alt]="director.name" />
+          </div>
+
+          <div class="director-card__info">
+            <span class="director-card__line"></span>
+            <h3>{{ director.name }}</h3>
+            <p>{{ director.position }}</p>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
