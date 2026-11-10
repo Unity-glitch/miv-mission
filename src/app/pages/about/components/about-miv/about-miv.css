@@ -16,7 +16,9 @@
   position: relative;
   min-height: 520px;
 }
-
+app-logo{
+  padding-top: 4px;
+}
 .about-miv__image img {
   width: 100%;
   height: 520px;

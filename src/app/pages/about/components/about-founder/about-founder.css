@@ -3,6 +3,7 @@
   background: #f6f6f6;
 }
 
+
 .about-founder__container {
   max-width: 1200px;
   margin: 0 auto;
@@ -25,12 +26,27 @@
   border-radius: 12px;
 }
 
+.about-founder__logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 3;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  padding: 5px;
+}
+
 .about-founder__image-label {
   position: absolute;
   left: 20px;
   right: 20px;
   bottom: 20px;
-  padding: 20px 24px;
+  padding: 10px 14px;
   background: var(--primary-color);
   border-radius: 8px;
 }
@@ -89,33 +105,6 @@
   font-weight: 500;
 }
 
-.founder-quote {
-  position: relative;
-  margin-top: 30px;
-  padding: 25px 25px 25px 55px;
-  background: #fff;
-  border-left: 4px solid #f3951f;
-  border-radius: 6px;
-}
-
-.quote-icon {
-  position: absolute;
-  top: 10px;
-  left: 18px;
-  color: #317e3d;
-  font-family: Georgia, serif;
-  font-size: 42px;
-  line-height: 1;
-}
-
-.founder-quote p {
-  margin: 0;
-  color: #555;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
-  font-style: italic;
-  line-height: 1.9;
-}
 
 @media (max-width: 900px) {
   .about-founder__container {
@@ -142,7 +131,29 @@
     height: 380px;
   }
 
+  .about-founder__logo {
+    top: 12px;
+    right: 12px;
+    width: 55px;
+    height: 55px;
+  }
+
+  .about-founder__content {
+    text-align: center;
+  }
+
   .about-founder__content h2 {
     font-size: 30px;
+  }
+
+  .founder-quote {
+    text-align: center;
+    padding: 25px;
+  }
+
+  .quote-icon {
+    position: static;
+    display: block;
+    margin-bottom: 5px;
   }
 }
