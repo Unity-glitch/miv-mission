@@ -1,0 +1,144 @@
+<section class="mission-list" id="mission-list">
+  <div class="mission-list__container">
+    <div class="mission-filters" appScrollReveal>
+      <div class="mission-filters__heading">
+        <div>
+          <span class="section-label">FIND A MISSION FIELD</span>
+          <h2>Explore Where We Serve</h2>
+          <p>Filter mission fields by location to discover where MIV Mission is serving.</p>
+        </div>
+
+        <button type="button" class="clear-filters" (click)="clearFilters()">Clear Filters</button>
+      </div>
+
+      <div class="mission-filters__grid">
+        <div class="filter-group">
+          <label for="fieldType">Field Type</label>
+          <select
+            id="fieldType"
+            [value]="selectedFieldType"
+            (change)="onFieldTypeChange($any($event.target).value)"
+          >
+            <option value="All">All Fields</option>
+            <option value="Local">Local Fields (Nigeria)</option>
+            <option value="International">International Fields</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="continent">Continent</label>
+          <select
+            id="continent"
+            [value]="selectedContinent"
+            [disabled]="selectedFieldType === 'Local'"
+            (change)="onContinentChange($any($event.target).value)"
+          >
+            <option value="">All Continents</option>
+
+            @for (continent of continents; track continent) {
+              <option [value]="continent">{{ continent }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="country">Country</label>
+          <select
+            id="country"
+            [value]="selectedCountry"
+            [disabled]="selectedFieldType === 'Local'"
+            (change)="onCountryChange($any($event.target).value)"
+          >
+            <option value="">All Countries</option>
+
+            @for (country of countries; track country) {
+              <option [value]="country">{{ country }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="state">State / Region</label>
+          <select
+            id="state"
+            [value]="selectedState"
+            (change)="onStateChange($any($event.target).value)"
+          >
+            <option value="">All States / Regions</option>
+
+            @for (state of states; track state) {
+              <option [value]="state">{{ state }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="city">City / Community</label>
+          <select
+            id="city"
+            [value]="selectedCity"
+            (change)="onCityChange($any($event.target).value)"
+          >
+            <option value="">All Cities / Communities</option>
+
+            @for (city of cities; track city) {
+              <option [value]="city">{{ city }}</option>
+            }
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="mission-list__results">
+      <p>
+        Showing
+        <strong>{{ filteredMissionFields.length }}</strong>
+        mission field(s)
+      </p>
+    </div>
+
+    @if (filteredMissionFields.length > 0) {
+      <div class="mission-list__grid">
+        @for (field of filteredMissionFields; track field.id) {
+          <article class="mission-card" appScrollReveal>
+            <div class="mission-card__image">
+              <img [src]="field.image" [alt]="field.name" />
+
+              <span class="mission-card__category">
+                {{ field.category }}
+              </span>
+            </div>
+
+            <div class="mission-card__content">
+              <p class="mission-card__location">
+                <i class="pi pi-map-marker"></i>
+                {{ field.location }}
+              </p>
+
+              <h3>{{ field.name }}</h3>
+
+              <p class="mission-card__description">
+                {{ field.description }}
+              </p>
+
+              <a [routerLink]="['/mission-fields', field.id]">
+                Explore Mission Field
+              </a>
+            </div>
+          </article>
+        }
+      </div>
+    } @else {
+      <div class="mission-list__empty">
+        <h3>No Mission Fields Found</h3>
+
+        <p>
+          There are no mission fields matching your selected filters. Try changing your location
+          filters.
+        </p>
+
+        <button type="button" (click)="clearFilters()">Clear Filters</button>
+      </div>
+    }
+  </div>
+</section>

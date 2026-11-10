@@ -1,0 +1,23 @@
+@if (field) {
+  <app-mission-field-hero [field]="field"></app-mission-field-hero>
+
+  <app-mission-field-about [field]="field"></app-mission-field-about>
+
+  <app-mission-field-prayer-request
+    [submissionStatus]="prayerRequestStatus"
+    [isSubmitting]="isSubmittingPrayer"
+    (prayerRequestSubmitted)="onPrayerRequestSubmitted($event)"
+    [field]="field"
+  ></app-mission-field-prayer-request>
+
+  <app-mission-field-material-support [field]="field"></app-mission-field-material-support>
+
+  <app-mission-field-updates [field]="field"></app-mission-field-updates>
+  <app-mission-field-cta [field]="field"></app-mission-field-cta>
+} @else {
+  <section class="mission-not-found">
+    <h2>Mission Field Not Found</h2>
+    <p>The mission field you're looking for could not be found.</p>
+    <a routerLink="/mission-fields">Back to Mission Fields</a>
+  </section>
+}

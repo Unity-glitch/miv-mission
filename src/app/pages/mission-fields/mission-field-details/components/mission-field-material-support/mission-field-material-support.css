@@ -1,0 +1,137 @@
+.material-support {
+  padding: 100px 6%;
+  background: #fff;
+}
+
+.material-support__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.material-support__content .section-label {
+  color: #f3951f;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.material-support__content h2 {
+  margin: 16px 0 20px;
+  color: #343639;
+  font-size: 38px;
+  line-height: 1.3;
+}
+
+.material-support__content p {
+  margin-bottom: 18px;
+  color: #666;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.material-support__content strong {
+  color: #317e3d;
+}
+
+.material-support__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  padding: 15px 28px;
+  border-radius: 5px;
+  background: #317e3d;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.material-support__button:hover {
+  background: #246330;
+}
+
+.material-support__items {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.material-support__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 25px;
+  background: #f6f6f6;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.material-support__item:hover {
+  transform: translateY(-4px);
+}
+
+.material-support__icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #c8eacd;
+  color: #317e3d;
+  font-size: 22px;
+}
+
+.material-support__item h3 {
+  margin: 0 0 8px;
+  color: #343639;
+  font-size: 18px;
+}
+
+.material-support__item p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+app-logo{
+  padding-top: 6px;
+}
+
+@media (max-width: 900px) {
+  .material-support__container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+}
+
+@media (max-width: 576px) {
+  .material-support {
+    padding: 65px 5%;
+  }
+
+  .material-support__content h2 {
+    font-size: 30px;
+  }
+
+  .material-support__item {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .material-support__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+  }
+}

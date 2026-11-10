@@ -1,6 +1,7 @@
 <header class="site-header">
   <div class="header-container">
     <app-logo width="50px" height="50px"></app-logo>
+
     <nav class="nav-links" [class.open]="menuOpen">
       <a
         routerLink="/"
@@ -10,19 +11,27 @@
       >
         Home
       </a>
+
       <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()"> About Us </a>
-      <a routerLink="/mission" routerLinkActive="active" (click)="closeMenu()"> Our Mission </a>
-      <a routerLink="/churches" routerLinkActive="active" (click)="closeMenu()"> Churches </a>
-      <a routerLink="/missionaries" routerLinkActive="active" (click)="closeMenu()">
-        Missionaries
+
+      <a routerLink="/mission-fields" routerLinkActive="active" (click)="closeMenu()">
+        Mission Fields
       </a>
+
+      <a routerLink="/outreaches" routerLinkActive="active" (click)="closeMenu()"> Outreaches </a>
+
+      <a routerLink="/training-mobilisation" routerLinkActive="active" (click)="closeMenu()">
+        Training & Mobilisation
+      </a>
+
+      <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()"> Contact Us </a>
+
       <a routerLink="/donate" routerLinkActive="active" (click)="closeMenu()"> Donate </a>
-      <a routerLink="/events" routerLinkActive="active" (click)="closeMenu()"> Events </a>
-      <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()"> Contact </a>
-      <a routerLink="/contact" class="mobile-cta" (click)="closeMenu()"> Support Our Mission </a>
+
+      <a routerLink="/donate" class="mobile-cta" (click)="closeMenu()"> Support Our Mission </a>
     </nav>
 
-    <a routerLink="/contact" class="header-cta"> Support Our Mission </a>
+    <a routerLink="/donate" class="header-cta"> Support Our Mission </a>
 
     <button
       class="menu-toggle"

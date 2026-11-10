@@ -18,6 +18,18 @@ export const routes: Routes = [
         path: 'about',
         loadComponent: () => import('./pages/about/about').then((m) => m.About),
       },
+      {
+        path: 'mission-fields',
+        loadComponent: () =>
+          import('./pages/mission-fields/mission-fields').then((m) => m.MissionFields),
+      },
+      {
+        path: 'mission-fields/:id',
+        loadComponent: () =>
+          import('./pages/mission-fields/mission-field-details/mission-field-details').then(
+            (m) => m.MissionFieldDetails,
+          ),
+      },
     ],
   },
 ];

@@ -1,0 +1,40 @@
+<section class="mission-about" id="mission-about">
+  <div class="mission-about__container">
+    <div class="mission-about__image" appScrollReveal>
+      <img [src]="field.image" [alt]="field.name" />
+
+      <div class="mission-about__location">
+        <app-logo
+          [width]="'30px'"
+          [height]="'30px'"
+          [showBlueText]="false"
+          [showWhiteText]="false"
+        ></app-logo>
+        <span>{{ field.location }}</span>
+      </div>
+    </div>
+
+    <div class="mission-about__content" appScrollReveal>
+      <span class="section-label">ABOUT THIS MISSION FIELD</span>
+
+      <h2>{{ field.about.title }}</h2>
+
+      <p>{{ field.about.content }}</p>
+
+      <div class="mission-about__vision">
+        <h3>Our Vision</h3>
+        <p>{{ field.about.vision }}</p>
+      </div>
+
+      <div class="mission-about__objectives">
+        <h3>Our Objectives</h3>
+
+        <ul>
+          @for (objective of field.about.objectives; track objective) {
+            <li>{{ objective }}</li>
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

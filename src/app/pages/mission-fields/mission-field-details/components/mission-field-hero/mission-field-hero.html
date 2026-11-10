@@ -1,0 +1,32 @@
+<section class="mission-detail-hero">
+  <div class="mission-detail-hero__overlay"></div>
+
+  <div class="mission-detail-hero__container">
+    <div class="mission-detail-hero__breadcrumb" appScrollReveal>
+      <a routerLink="/">Home</a>
+      <span>/</span>
+      <a routerLink="/mission-fields">Mission Fields</a>
+      <span>/</span>
+      <span>{{ field.name }}</span>
+    </div>
+
+    <div class="mission-detail-hero__content" appScrollReveal>
+      <span class="mission-detail-hero__label">OUR MISSION FIELDS</span>
+
+      <h1>  
+        {{ field.name }}
+        <span>{{ field.location }}</span>
+      </h1>
+
+      <p>
+        {{ field.description }}
+      </p>
+
+      <div class="mission-detail-hero__actions">
+        <a href="#mission-about" class="hero-btn hero-btn--primary"> Discover This Mission </a>
+
+        <a routerLink="/donate" class="hero-btn hero-btn--outline"> Support This Mission </a>
+      </div>
+    </div>
+  </div>
+</section>

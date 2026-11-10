@@ -12,7 +12,7 @@
       rgba(10, 30, 17, 0.75) 55%,
       rgba(10, 30, 17, 0.4) 100%
     ),
-    url('/images/about-hero.jpg') center/cover no-repeat;
+    url('/images/home-img3.jpeg') center/cover no-repeat;
   color: var(--white);
 }
 
@@ -91,9 +91,20 @@
 }
 
 @media (max-width: 768px) {
+  .about-hero-content h1, p{
+    text-align: center;
+  }
+  .section-label{
+    display: flex;
+    justify-content: center;
+  }
+  .about-hero-btn{
+    width: 100%;
+    justify-content: center;
+  }
   .about-hero {
     min-height: 480px;
-    padding: 100px 6% 30px;
+    padding: 120px 5% 30px;
   }
 
   .about-hero-content h1 {
@@ -104,7 +115,7 @@
 @media (max-width: 480px) {
   .about-hero {
     min-height: 450px;
-    padding: 100px 5% 30px;
+    padding: 120px 5% 30px;
   }
 
   .about-hero-content h1 {

@@ -1,0 +1,352 @@
+.mission-list {
+  padding: 100px 6%;
+  background: #f6f6f6;
+}
+
+.mission-list__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mission-list__heading {
+  max-width: 650px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.mission-list__heading h2 {
+  margin: 0 0 18px;
+  color: #343639;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.mission-list__heading h2 span {
+  color: #317e3d;
+}
+
+.mission-list__results {
+  display: flex;
+  justify-content: start;
+  font-size: 20px;
+}
+
+.mission-list__heading p {
+  margin: 0;
+  color: #666;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.mission-list__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.mission-card {
+  overflow: hidden;
+  background: #fff;
+  border-radius: 10px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.mission-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.mission-card__image {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+  background: #eaf5eb;
+}
+
+.mission-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.mission-card:hover .mission-card__image img {
+  transform: scale(1.05);
+}
+
+.mission-card__category {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  padding: 8px 13px;
+  color: #fff;
+  background: var(--primary-color);
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.mission-card__content {
+  padding: 25px;
+}
+
+.mission-card__location {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 13px;
+  color: #777;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+}
+
+.location-icon {
+  font-size: 13px;
+}
+
+.mission-card__content h3 {
+  margin: 0 0 12px;
+  color: #343639;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.mission-card__content > p {
+  margin: 0 0 20px;
+  color: #666;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+}
+.mission-card__content a{
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.mission-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #317e3d;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.mission-card__link:hover {
+  gap: 18px;
+  color: #f3951f;
+}
+
+.mission-filters {
+  margin-bottom: 45px;
+  background: #f6f6f6;
+  border-radius: 14px;
+}
+
+.mission-filters__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.mission-filters__heading h2 {
+  margin: 8px 0;
+  color: #343639;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.mission-filters__heading p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.section-label {
+  color: #317e3d;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.clear-filters {
+  padding: 11px 18px;
+  border: 1px solid #317e3d;
+  border-radius: 6px;
+  background: transparent;
+  color: #317e3d;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.clear-filters:hover {
+  background: #317e3d;
+  color: #fff;
+}
+
+.mission-filters__grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.filter-group label {
+  color: #343639;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.filter-group select {
+  width: 100%;
+  min-width: 0;
+  height: 46px;
+  padding: 0 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  background: #fff;
+  color: #343639;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.filter-group select:focus {
+  border-color: #317e3d;
+}
+
+.no-fields {
+  padding: 50px 20px;
+  text-align: center;
+  color: #343639;
+}
+
+.no-fields p {
+  color: #777;
+  font-size: 14px;
+}
+
+.no-fields button {
+  margin-top: 12px;
+  padding: 11px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #317e3d;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .mission-filters__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .mission-card__location{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mission-list__results {
+    display: flex;
+    justify-content: start;
+    font-size: 20px;
+  }
+  .section-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 8px;
+  }
+  .section-label h2,
+  p {
+    text-align: center;
+  }
+  .mission-filters {
+    padding: 22px 0;
+  }
+
+  .mission-filters__heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .mission-filters__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .mission-filters__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .mission-list__grid {
+    text-align: center;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .mission-list {
+    padding: 70px 5%;
+  }
+
+  .mission-list__heading {
+    margin-bottom: 35px;
+  }
+
+  .mission-list__grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .mission-card__image {
+    height: 230px;
+  }
+
+  .mission-card__content {
+    padding: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mission-card,
+  .mission-card__image img,
+  .mission-card__link {
+    transition: none;
+  }
+
+  .mission-card:hover {
+    transform: none;
+  }
+
+  .mission-card:hover .mission-card__image img {
+    transform: none;
+  }
+}

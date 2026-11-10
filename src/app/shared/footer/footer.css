@@ -146,13 +146,15 @@
 
 .footer-contact-btn {
   display: inline-flex;
+  width: 100%;
   align-items: center;
+  justify-content: center;
   gap: 15px;
   margin-top: 8px;
   padding: 12px 20px;
   border-radius: 4px;
-  background: var(--secondary-color);
-  color: var(--white);
+  background: #fff;
+  color: var(--primary-color);
   font-size: 12px;
   font-weight: 700;
   text-decoration: none;
@@ -162,8 +164,9 @@
 }
 
 .footer-contact-btn:hover {
-  background: #df8110;
-  transform: translateY(-3px);
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
 }
 
 .footer-contact-btn span {

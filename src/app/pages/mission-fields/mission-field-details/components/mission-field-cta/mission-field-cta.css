@@ -1,0 +1,120 @@
+.mission-cta {
+  position: relative;
+  padding: 110px 6%;
+  background:
+    linear-gradient(rgba(15, 55, 25, 0.9), rgba(15, 55, 25, 0.9)),
+    url('/images/mission-field-cta.jpg') center/cover no-repeat;
+  overflow: hidden;
+}
+
+.mission-cta__container {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mission-cta__content .section-label {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #f3951f;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.mission-cta__content h2 {
+  max-width: 800px;
+  margin: 0 auto 22px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.mission-cta__content h2 span {
+  color: #9ed3a3;
+}
+
+.mission-cta__content p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.mission-cta__actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 35px;
+}
+
+.mission-cta__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 28px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.mission-cta__button--primary {
+  background: #f3951f;
+  color: #fff;
+}
+
+.mission-cta__button--primary:hover {
+  background: #df8010;
+  transform: translateY(-3px);
+}
+
+.mission-cta__button--outline {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.mission-cta__button--outline:hover {
+  background: #fff;
+  color: #317e3d;
+}
+
+@media (max-width: 768px) {
+  .mission-cta {
+    padding: 80px 5%;
+  }
+
+  .mission-cta__content h2 {
+    font-size: 32px;
+  }
+
+  .mission-cta__content p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-cta {
+    padding: 65px 5%;
+  }
+
+  .mission-cta__content h2 {
+    font-size: 27px;
+  }
+
+  .mission-cta__actions {
+    flex-direction: column;
+  }
+
+  .mission-cta__button {
+    width: 100%;
+  }
+}

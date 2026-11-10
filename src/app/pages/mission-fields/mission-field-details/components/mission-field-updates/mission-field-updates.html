@@ -1,0 +1,56 @@
+<section class="mission-updates">
+  <div class="mission-updates__container">
+    <div class="mission-updates__header">
+      <div>
+        <span class="section-label">STORIES FROM THE FIELD</span>
+        <h2>Recent Mission Updates</h2>
+        <p>
+          Stay connected with the latest activities and developments from
+          {{ field.name }}.
+        </p>
+      </div>
+    </div>
+
+    @if (field.recentUpdates.length > 0) {
+      <div class="mission-updates__carousel">
+        <div class="mission-updates__track">
+          @for (update of field.recentUpdates; track update.id) {
+            <article class="mission-update-card">
+              <div class="mission-update-card__image">
+                <img [src]="update.image" [alt]="update.title" />
+              </div>
+
+              <div class="mission-update-card__content">
+                <span class="mission-update-card__label"> MISSION UPDATE </span>
+
+                <h3>{{ update.title }}</h3>
+
+                <p>{{ update.description }}</p>
+              </div>
+            </article>
+          }
+
+          @for (update of field.recentUpdates; track update.id + '-duplicate') {
+            <article class="mission-update-card" aria-hidden="true">
+              <div class="mission-update-card__image">
+                <img [src]="update.image" alt="" />
+              </div>
+
+              <div class="mission-update-card__content">
+                <span class="mission-update-card__label"> MISSION UPDATE </span>
+
+                <h3>{{ update.title }}</h3>
+
+                <p>{{ update.description }}</p>
+              </div>
+            </article>
+          }
+        </div>
+      </div>
+    } @else {
+      <div class="mission-updates__empty">
+        <p>There are currently no updates for this mission field.</p>
+      </div>
+    }
+  </div>
+</section>

@@ -1,0 +1,201 @@
+<section class="prayer-request">
+  <div class="prayer-request__container">
+    <div class="prayer-request__content">
+      <span class="section-label">WE BELIEVE IN THE POWER OF PRAYER</span>
+
+      <h2>Can We Pray With You?</h2>
+
+      <p>
+        You don't have to walk through life's challenges alone. We believe in the power of prayer,
+        and we would be honoured to stand with you in faith.
+      </p>
+
+      <p>
+        Share your prayer request with us concerning
+        <strong>{{ field.name }}</strong
+        >, and let us pray with you.
+      </p>
+
+      <button type="button" class="prayer-request__button" (click)="openModal()">
+        Share Your Prayer Request
+      </button>
+    </div>
+
+    <div class="prayer-request__highlight">
+      <video class="prayer-request__video" autoplay muted loop playsinline preload="auto">
+        <source src="/praying.mp4" type="video/mp4" />
+      </video>
+
+      <div class="prayer-request__video-overlay"></div>
+
+      <div class="prayer-request__logo">
+        <app-logo
+          [width]="'50px'"
+          [height]="'50px'"
+          [showBlueText]="false"
+          [showWhiteText]="false"
+        ></app-logo>
+      </div>
+      <div class="prayer-request__highlight-content">
+        <span class="prayer-request__quote">
+          "The prayer of a righteous person is powerful and effective."
+        </span>
+
+        <span class="prayer-request__reference">James 5:16</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+@if (showModal) {
+  <div class="prayer-modal">
+    <button
+      type="button"
+      class="prayer-modal__backdrop"
+      aria-label="Close prayer request form"
+      (click)="closeModal()"
+    ></button>
+
+    <div
+      class="prayer-modal__content"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="prayer-modal-title"
+    >
+      <button type="button" class="prayer-modal__close" aria-label="Close" (click)="closeModal()">
+        <i class="pi pi-times">X</i>
+      </button>
+
+      <div class="prayer-modal__header">
+        <div class="pb-1">
+          <app-logo
+            [width]="'100px'"
+            [height]="'100px'"
+            [showBlueText]="false"
+            [showWhiteText]="false"
+          ></app-logo>
+        </div>
+
+        <span class="section-label">WE ARE HERE TO PRAY WITH YOU</span>
+
+        <h2 id="prayer-modal-title">Share Your Prayer Request</h2>
+
+        <p>
+          Whatever is on your heart, you can share it with us. Our team would love to stand with you
+          in prayer.
+        </p>
+      </div>
+
+      <form
+        #prayerForm="ngForm"
+        (ngSubmit)="submitPrayerRequest(prayerForm)"
+        class="prayer-modal__form"
+      >
+        <div class="prayer-modal__field">
+          <label for="prayer-name">Full Name <span>*</span></label>
+
+          <input
+            type="text"
+            id="prayer-name"
+            name="name"
+            [(ngModel)]="prayerRequest.name"
+            placeholder="Enter your full name"
+            required
+          />
+        </div>
+
+        <div class="prayer-modal__row">
+          <div class="prayer-modal__field">
+            <label for="prayer-email">Email Address <span>*</span></label>
+
+            <input
+              type="email"
+              id="prayer-email"
+              name="email"
+              [(ngModel)]="prayerRequest.email"
+              placeholder="Enter your email"
+              required
+              email
+            />
+          </div>
+
+          <div class="prayer-modal__field">
+            <label for="prayer-phone">Phone Number</label>
+
+            <input
+              type="tel"
+              id="prayer-phone"
+              name="phone"
+              [(ngModel)]="prayerRequest.phone"
+              placeholder="Enter phone number"
+            />
+          </div>
+        </div>
+
+        <div class="prayer-modal__field">
+          <label for="prayer-message">Your Prayer Request <span>*</span></label>
+
+          <textarea
+            id="prayer-message"
+            name="request"
+            [(ngModel)]="prayerRequest.request"
+            placeholder="Please share your prayer request with us..."
+            rows="5"
+            required
+            minlength="10"
+          ></textarea>
+        </div>
+
+        <div class="prayer-modal__note">
+          <i class="pi pi-lock"></i>
+          <span> Your prayer request will be handled with care and respect. </span>
+        </div>
+
+        <div class="prayer-modal__actions">
+          <button type="button" class="prayer-modal__cancel" (click)="closeModal()">Cancel</button>
+
+          <button
+            type="submit"
+            class="prayer-modal__submit"
+            [disabled]="prayerForm.invalid || isSubmitting"
+          >
+            @if (isSubmitting) {
+              <i class="pi pi-spin pi-spinner"></i>
+              Sending Request...
+            } @else {
+              Submit Prayer Request
+            }
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+}
+@if (submissionStatus === 'success') {
+  <div class="prayer-feedback prayer-feedback--success" role="alert">
+    <div class="prayer-feedback__icon">
+      <i class="pi pi-check-circle"></i>
+    </div>
+
+    <div>
+      <h3>Prayer Request Sent!</h3>
+      <p>
+        Thank you for sharing your prayer request with us. We will stand with you in faith and keep
+        you in our prayers.
+      </p>
+    </div>
+  </div>
+}
+
+@if (submissionStatus === 'error') {
+  <div class="prayer-feedback prayer-feedback--error" role="alert">
+    <div class="prayer-feedback__icon">
+      <i class="pi pi-exclamation-circle"></i>
+    </div>
+
+    <div>
+      <h3>Unable to Send Request</h3>
+      <p>Something went wrong while submitting your prayer request. Please try again.</p>
+    </div>
+  </div>
+}
