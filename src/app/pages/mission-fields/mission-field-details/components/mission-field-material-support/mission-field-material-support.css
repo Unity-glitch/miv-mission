@@ -44,7 +44,7 @@
   margin-top: 15px;
   padding: 15px 28px;
   border-radius: 5px;
-  background: #317e3d;
+  background: var(--primary-color);
   color: #fff;
   font-size: 14px;
   font-weight: 600;
@@ -53,7 +53,7 @@
 }
 
 .material-support__button:hover {
-  background: #246330;
+  background: var(--hover-color-dark);
 }
 
 .material-support__items {
@@ -113,13 +113,26 @@ app-logo{
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
+  .material-support__button{
+    width: 100%;
+  }
+  .section-label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .material-support {
     padding: 65px 5%;
   }
 
   .material-support__content h2 {
-    font-size: 30px;
+    text-align: center;
+    font-size: 28px;
+  }
+  .material-support__content p {
+    text-align: center;
+    font-size: 14px;
   }
 
   .material-support__item {

@@ -68,12 +68,12 @@
 }
 
 .mission-cta__button--primary {
-  background: #f3951f;
+  background: var(--primary-color);
   color: #fff;
 }
 
 .mission-cta__button--primary:hover {
-  background: #df8010;
+  background: var(--hover-color-dark);
   transform: translateY(-3px);
 }
 
@@ -93,7 +93,7 @@
   }
 
   .mission-cta__content h2 {
-    font-size: 32px;
+    font-size: 21px;
   }
 
   .mission-cta__content p {
@@ -107,7 +107,7 @@
   }
 
   .mission-cta__content h2 {
-    font-size: 27px;
+    font-size: 21px;
   }
 
   .mission-cta__actions {
