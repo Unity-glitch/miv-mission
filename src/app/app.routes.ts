@@ -30,6 +30,11 @@ export const routes: Routes = [
             (m) => m.MissionFieldDetails,
           ),
       },
+      {
+        path: 'contact',
+        loadComponent: () =>
+          import('./pages/contact/contact').then((m) => m.Contact),
+      },
     ],
   },
 ];

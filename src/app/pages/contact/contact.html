@@ -1,0 +1,319 @@
+<section class="contact-hero">
+  <div class="contact-hero__overlay"></div>
+
+  <div class="contact-hero__container">
+    <div class="contact-hero__breadcrumb">
+      <a routerLink="/">Home</a>
+      <span>/</span>
+      <span>Contact Us</span>
+    </div>
+
+    <div class="contact-hero__content">
+      <span class="section-label">WE WOULD LOVE TO HEAR FROM YOU</span>
+
+      <h1>
+        Let's Connect and
+        <span>Make a Difference.</span>
+      </h1>
+
+      <p>
+        Whether you have a question, a prayer request, or would like to partner with our mission, we
+        would be delighted to hear from you.
+      </p>
+
+      <a href="#contact-details" class="contact-hero__button"> Get in Touch </a>
+    </div>
+
+    <div class="contact-hero__bottom">
+      <span>Taking the Gospel Beyond Boundaries.</span>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact-details">
+  <div class="contact-section__container">
+    <div class="contact-section__heading">
+      <span class="section-label">GET IN TOUCH</span>
+      <h2>We Are Here to <span>Connect With You</span></h2>
+      <p>
+        Reach out to us through any of our contact channels or send us a message using the form. We
+        look forward to hearing from you.
+      </p>
+    </div>
+
+    <div class="contact-section__grid">
+      <div class="contact-info">
+        <div class="contact-info__heading">
+          <span>CONTACT INFORMATION</span>
+          <h3>Let's Start a Conversation</h3>
+          <p>
+            Have questions about our mission, outreaches, training programmes or how to get
+            involved? Contact our team.
+          </p>
+        </div>
+
+        <a href="mailto:mivmandate2010@gmail.com" class="contact-info__item">
+          <span class="contact-info__icon">✉</span>
+          <span>
+            <small>Email Address</small>
+            <strong>mivmandate2010@gmail.com</strong>
+          </span>
+        </a>
+
+        <a href="tel:+2348080854818" class="contact-info__item">
+          <span class="contact-info__icon">☎</span>
+          <span>
+            <small>Phone Number</small>
+            <strong>+234 808 085 4818</strong>
+          </span>
+        </a>
+
+        <a href="tel:+2347037335194" class="contact-info__item">
+          <span class="contact-info__icon">☎</span>
+          <span>
+            <small>Alternative Phone Number</small>
+            <strong>+234 703 733 5194</strong>
+          </span>
+        </a>
+
+        <div class="contact-info__item">
+          <span class="contact-info__icon">⌖</span>
+          <span>
+            <small>Headquarters Address</small>
+            <strong>
+              Leadership and Mission Centre, Olororo Junction, Ojoo, Ibadan, Oyo State, Nigeria.
+            </strong>
+          </span>
+        </div>
+
+        <div class="contact-info__postal">
+          <span>POSTAL ADDRESS</span>
+          <p>P.O Box 21066, U.I.P.O. Ibadan, Oyo State, Nigeria.</p>
+        </div>
+      </div>
+
+      <div class="contact-form-wrapper">
+        <div class="contact-form__heading">
+          <span class="section-label">SEND US A MESSAGE</span>
+          <h3>How Can We Help You?</h3>
+          <p>Fill in the form below and we'll be glad to hear from you.</p>
+        </div>
+
+        <form
+          #contactFormRef="ngForm"
+          (ngSubmit)="submitContactForm(contactFormRef)"
+          class="contact-form"
+        >
+          <div class="contact-form__row">
+            <div class="form-group">
+              <label for="contactName">Full Name</label>
+              <input
+                type="text"
+                id="contactName"
+                name="name"
+                [(ngModel)]="contactForm.name"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="contactEmail">Email Address</label>
+              <input
+                type="email"
+                id="contactEmail"
+                name="email"
+                [(ngModel)]="contactForm.email"
+                placeholder="Enter your email"
+                required
+                email
+              />
+            </div>
+          </div>
+
+          <div class="contact-form__row">
+            <div class="form-group">
+              <label for="contactPhone">Phone Number</label>
+              <input
+                type="tel"
+                id="contactPhone"
+                name="phone"
+                [(ngModel)]="contactForm.phone"
+                placeholder="Enter your phone number"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="contactSubject">Subject</label>
+              <input
+                type="text"
+                id="contactSubject"
+                name="subject"
+                [(ngModel)]="contactForm.subject"
+                placeholder="What is your message about?"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="contactMessage">Your Message</label>
+            <textarea
+              id="contactMessage"
+              name="message"
+              [(ngModel)]="contactForm.message"
+              placeholder="Write your message here..."
+              rows="6"
+              required
+              minlength="10"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="contact-form__submit" [disabled]="contactFormRef.invalid">
+            Send Message
+          </button>
+
+          <p class="contact-form__note">
+            Your message will be prepared in your default email application.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="headquarters-section">
+  <div class="headquarters-section__container">
+    <div class="headquarters-section__heading">
+      <span class="section-label">COME VISIT US</span>
+      <h2>Find Us at Our <span>Headquarters</span></h2>
+      <p>
+        We welcome you to visit the MIV Mission Leadership and Mission Centre. Find our location on
+        the map and get directions from wherever you are.
+      </p>
+    </div>
+
+    <div class="headquarters-card">
+      <div class="headquarters-card__map">
+        <iframe
+          src="https://www.google.com/maps?q=Olororo%20Junction%2C%20Ojoo%2C%20Ibadan%2C%20Oyo%20State%2C%20Nigeria&output=embed"
+          width="100%"
+          height="100%"
+          style="border: 0"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="MIV Mission Headquarters Map"
+        ></iframe>
+      </div>
+
+      <div class="headquarters-card__details">
+        <div class="headquarters-card__location">
+          <span class="headquarters-card__icon">⌖</span>
+          <div>
+            <span>OUR HEADQUARTERS</span>
+            <h3>Leadership and Mission Centre</h3>
+            <p>Olororo Junction, Ojoo, Ibadan, Oyo State, Nigeria.</p>
+          </div>
+        </div>
+
+        <div class="headquarters-card__actions">
+          <a
+            href="https://maps.app.goo.gl/jnqzZq1BFgEFX3yf8"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="headquarters-card__button headquarters-card__button--primary"
+          >
+            View Church Location
+          </a>
+
+          <a
+            href="https://www.google.com/maps/dir/?api=1&destination=Leadership%20and%20Mission%20Centre%2C%20Olororo%20Junction%2C%20Ojoo%2C%20Ibadan%2C%20Oyo%20State%2C%20Nigeria"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="headquarters-card__button headquarters-card__button--outline"
+          >
+            Get Directions
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="social-section">
+  <div class="social-section__container">
+    <div class="social-section__heading">
+      <span class="section-label">STAY CONNECTED</span>
+      <h2>Connect With <span>MIV Mission</span></h2>
+      <p>
+        Stay connected with us and be part of the journey. Follow our social media platforms for
+        inspiring messages, mission updates, outreaches, events and testimonies.
+      </p>
+    </div>
+
+    <div class="social-grid">
+      <a
+        href="https://www.facebook.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-card social-card--facebook"
+      >
+        <span class="social-card__icon">f</span>
+        <span class="social-card__content">
+          <strong>Facebook</strong>
+          <small>Connect with our community</small>
+        </span>
+        <span class="social-card__action">Visit Page</span>
+      </a>
+
+      <a
+        href="https://www.instagram.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-card social-card--instagram"
+      >
+        <span class="social-card__icon">◎</span>
+        <span class="social-card__content">
+          <strong>Instagram</strong>
+          <small>See our mission moments</small>
+        </span>
+        <span class="social-card__action">Visit Page</span>
+      </a>
+
+      <a
+        href="https://www.youtube.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-card social-card--youtube"
+      >
+        <span class="social-card__icon">▶</span>
+        <span class="social-card__content">
+          <strong>YouTube</strong>
+          <small>Watch messages and updates</small>
+        </span>
+        <span class="social-card__action">Visit Channel</span>
+      </a>
+
+      <a
+        href="https://www.tiktok.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-card social-card--tiktok"
+      >
+        <span class="social-card__icon">♪</span>
+        <span class="social-card__content">
+          <strong>TikTok</strong>
+          <small>Discover our short videos</small>
+        </span>
+        <span class="social-card__action">Visit Page</span>
+      </a>
+    </div>
+
+    <div class="social-section__bottom">
+      <span class="social-section__line"></span>
+      <p>Taking the Gospel Beyond Boundaries.</p>
+      <span class="social-section__line"></span>
+    </div>
+  </div>
+</section>
