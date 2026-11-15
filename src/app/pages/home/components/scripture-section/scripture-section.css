@@ -50,6 +50,7 @@
 .scripture-content {
   max-width: 850px;
   margin: 0 auto;
+  font-size: 28px;
 }
 
 .scripture-label {
@@ -83,8 +84,7 @@
 }
 
 .scripture-content h2 {
-  font-family: 'montserrat', sans-serif;
-  font-size: clamp(27px, 4vw, 43px);
+  font-size: 28px;
   font-weight: 700;
   line-height: 1.5;
   color: var(--white);
@@ -145,7 +145,7 @@
 }
 
 .scripture-btn:hover {
-  background: #df8110;
+  background: rgba(255, 255, 255, 0.5);
   transform: translateY(-3px);
 }
 
@@ -188,7 +188,7 @@
   }
 
   .scripture-content h2 {
-    font-size: 26px;
+    font-size: 28px;
   }
 
   .scripture-message {

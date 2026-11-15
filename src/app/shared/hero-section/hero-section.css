@@ -129,7 +129,7 @@
   }
   .hero-section {
     height: calc(100svh - 75px);
-    min-height: 650px;
+    min-height: 100vh;
     max-height: none;
   }
 
@@ -142,7 +142,7 @@
   }
 
   .hero-content h1 {
-    font-size: clamp(38px, 8vw, 56px);
+    font-size: 28px;
     letter-spacing: -1.5px;
     line-height: 1.17;
   }
@@ -180,11 +180,11 @@
 
 @media (max-width: 480px) {
   .hero-section {
-    min-height: 100%;
+    min-height: 100vh;
   }
 
   .hero-content h1 {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .hero-content p {

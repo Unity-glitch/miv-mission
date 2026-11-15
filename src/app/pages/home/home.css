@@ -137,8 +137,7 @@
 
 .section-heading h2 {
   margin-bottom: 20px;
-  font-family: 'montserrat', sans-serif;
-  font-size: clamp(30px, 4vw, 48px);
+  font-size: 28px;
   font-weight: 700;
   line-height: 1.25;
   color: var(--text-color);
@@ -318,12 +317,11 @@
     transform 0.4s ease,
     box-shadow 0.4s ease,
     border-color 0.4s ease;
-  cursor: pointer;
 }
 
 .ministry-card:hover {
   transform: translateY(-9px);
-  border-bottom-color: var(--secondary-color);
+  border-bottom-color: var(--primary-color);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
 }
 
@@ -400,6 +398,7 @@
   font-weight: 700;
   text-decoration: none;
   transition: gap 0.3s ease;
+  cursor: pointer;
 }
 
 .card-link span {
@@ -528,7 +527,7 @@
   }
 
   .welcome-content h2 {
-    font-size: 38px;
+    font-size: 28px;
     text-align: center;
   }
 

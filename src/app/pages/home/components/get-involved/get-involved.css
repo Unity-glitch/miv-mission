@@ -30,12 +30,11 @@
 .section-label span {
   width: 30px;
   height: 2px;
-  background: var(--secondary-color);
+  background: var(--primary-color);
 }
 
 .involved-heading h2 {
-  font-family: 'montserrat', sans-serif;
-  font-size: clamp(30px, 4vw, 44px);
+  font-size: 28px;
   line-height: 1.3;
   color: var(--text-color);
   margin-bottom: 18px;
@@ -160,8 +159,8 @@
   justify-content: center;
   gap: 15px;
   padding: 15px 23px;
-  background: var(--secondary-color);
-  color: var(--white);
+  background: #fff;
+  color: var(--primary-color);
   text-decoration: none;
   border-radius: 5px;
   font-size: 13px;
@@ -173,7 +172,7 @@
 }
 
 .involved-btn:hover {
-  background: #df8110;
+  background: rgba(255, 255, 255, 0.8);
   transform: translateY(-3px);
 }
 

@@ -30,11 +30,11 @@
 .label-line {
   width: 32px;
   height: 2px;
-  background: var(--secondary-color);
+  background: var(--primary-color);
 }
 
 .events-heading h2 {
-  font-size: clamp(30px, 4vw, 45px);
+  font-size: 28px;
   line-height: 1.25;
   font-weight: 700;
   color: var(--text-color);
@@ -128,7 +128,7 @@
   left: 20px;
   bottom: 18px;
   padding: 8px 12px;
-  background: var(--secondary-color);
+  background: var(--primary-color);
   color: #ffffff;
   font-size: 10px;
   font-weight: 700;
@@ -181,48 +181,7 @@
   flex-shrink: 0;
 }
 
-.events-footer {
-  margin-top: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-}
 
-.events-footer p {
-  color: var(--text-color-secondary);
-  font-size: 14px;
-  line-height: 1.8;
-  max-width: 550px;
-}
-
-.events-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  padding: 15px 25px;
-  background: #002eb9;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 13px;
-  font-weight: 600;
-  transition:
-    background 0.3s ease,
-    transform 0.3s ease;
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-.events-btn:hover {
-  background: var(--primary-color-dark);
-  transform: translateY(-3px);
-}
-
-.events-btn span {
-  font-size: 19px;
-}
 
 @media (max-width: 992px) {
   .events-section {
@@ -268,15 +227,7 @@
     min-height: auto;
   }
 
-  .events-footer {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 35px;
-  }
-
-  .events-btn {
-    width: 100%;
-  }
+  
 }
 
 @media (prefers-reduced-motion: reduce) {

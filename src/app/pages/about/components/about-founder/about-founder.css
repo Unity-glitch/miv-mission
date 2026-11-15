@@ -70,8 +70,7 @@
 .section-label {
   display: inline-block;
   margin-bottom: 16px;
-  color: #317e3d;
-  font-family: 'Montserrat', sans-serif;
+  color: var(--primary-color);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -88,7 +87,7 @@
 
 .about-founder__content h2 span {
   display: block;
-  color: #317e3d;
+  color: #000;
 }
 
 .about-founder__content > p {
