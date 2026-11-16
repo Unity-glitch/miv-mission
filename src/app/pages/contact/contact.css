@@ -16,7 +16,7 @@
   padding: 120px 5%;
   background:
     linear-gradient(rgba(9, 32, 20, 0.82), rgba(9, 32, 20, 0.82)),
-    url('/images/contact-hero.jpg') center/cover no-repeat;
+    url('/images/home-img1.jpeg') center/cover no-repeat;
 }
 
 .contact-hero__overlay {
@@ -108,7 +108,6 @@
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   color: rgba(255, 255, 255, 0.8);
-  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 2px;
@@ -137,16 +136,9 @@
 .social-section__heading h2 {
   margin: 0 0 16px;
   color: #343639;
-  font-family: 'Montserrat', sans-serif;
   font-size: clamp(28px, 3.5vw, 40px);
   font-weight: 800;
   line-height: 1.3;
-}
-
-.contact-section__heading h2 span,
-.headquarters-section__heading h2 span,
-.social-section__heading h2 span {
-  color: #317e3d;
 }
 
 .contact-section__heading p,
@@ -173,6 +165,10 @@
 }
 
 .contact-info__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 35px;
 }
 
@@ -187,8 +183,8 @@
 .contact-info__heading h3 {
   margin: 12px 0;
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 25px;
+  text-align: center;
+  font-size: 23px;
   font-weight: 700;
   line-height: 1.4;
 }
@@ -198,6 +194,7 @@
   color: rgba(255, 255, 255, 0.72);
   font-size: 13px;
   line-height: 1.9;
+  text-align: center;
 }
 
 .contact-info__item {
@@ -247,6 +244,7 @@
 }
 
 .contact-info__postal {
+  text-align: center;
   margin-top: 30px;
   padding: 22px 0 0;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -587,7 +585,7 @@
 }
 
 .social-card__action {
-  color: #317e3d;
+  color: var(--primary-color);
   font-size: 11px;
   font-weight: 800;
   white-space: nowrap;
@@ -603,7 +601,7 @@
 
 .social-section__bottom p {
   margin: 0;
-  color: #317e3d;
+  color: var(--primary-color);
   font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   font-weight: 800;
@@ -614,7 +612,7 @@
 .social-section__line {
   width: 65px;
   height: 1px;
-  background: #c8d9ca;
+  background: var(--primary-color);
 }
 
 @media (max-width: 950px) {
@@ -653,6 +651,7 @@
   }
 
   .contact-hero__bottom {
+    width: 100%;
     text-align: center;
     margin-top: 45px;
   }
