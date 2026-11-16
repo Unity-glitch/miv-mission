@@ -33,7 +33,7 @@ export class MissionFieldDataService {
   private missionFields: MissionField[] = [
     {
       id: 'ikeja',
-      name: 'Ikeja Mission Field',
+      name: 'Ikeja Mission Field,',
       location: 'Ikeja, Lagos, Nigeria',
       category: 'Community Mission',
       image: '/images/home-img3.jpeg',
@@ -347,7 +347,7 @@ export class MissionFieldDataService {
     },
     {
       id: 'mumbai',
-      name: 'Mumbai Mission Field',
+      name: 'Mumbai Mission Field,',
       location: 'Mumbai, India',
       category: 'International Mission',
       image: '/images/home-img4.jpeg',
