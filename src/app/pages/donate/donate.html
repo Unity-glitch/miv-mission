@@ -1,0 +1,209 @@
+<section class="donate-hero">
+  <div class="donate-hero__overlay"></div>
+
+  <div class="donate-hero__content">
+    <div class="donate-hero__breadcrumb">
+      <a routerLink="/">Home</a>
+      <span>/</span>
+      <span>Donate</span>
+    </div>
+
+    <span class="section-label">SUPPORT THE MISSION</span>
+
+    <h1>
+      Your Giving Can Make
+      <span>A Lasting Difference.</span>
+    </h1>
+
+    <p>
+      Choose a specific mission field, outreach or training programme you would like to support.
+      Every contribution helps strengthen the work and impact of the mission.
+    </p>
+  </div>
+</section>
+
+<section class="donate-section">
+  <div class="donate-container">
+    <div class="donate-heading">
+      <span class="section-label">MAKE YOUR CONTRIBUTION</span>
+      <h2>Choose What You Want to Support</h2>
+      <p>Select a category and a specific mission or programme before making your contribution.</p>
+    </div>
+
+    <div class="donate-categories">
+      <button
+        type="button"
+        class="donate-category"
+        [class.active]="selectedCategory === 'mission-field'"
+        (click)="selectedCategory = 'mission-field'; onCategoryChange()"
+      >
+        <span class="donate-category__icon">
+          <i class="pi pi-globe"></i>
+        </span>
+        <span class="donate-category__title">Mission Fields</span>
+        <span class="donate-category__description"> Support a particular mission field. </span>
+      </button>
+
+      <button
+        type="button"
+        class="donate-category"
+        [class.active]="selectedCategory === 'outreach'"
+        (click)="selectedCategory = 'outreach'; onCategoryChange()"
+      >
+        <span class="donate-category__icon">
+          <i class="pi pi-heart"></i>
+        </span>
+        <span class="donate-category__title">Outreaches</span>
+        <span class="donate-category__description">
+          Support a particular outreach or project.
+        </span>
+      </button>
+
+      <button
+        type="button"
+        class="donate-category"
+        [class.active]="selectedCategory === 'training'"
+        (click)="selectedCategory = 'training'; onCategoryChange()"
+      >
+        <span class="donate-category__icon">
+          <i class="pi pi-book"></i>
+        </span>
+        <span class="donate-category__title"> Training &amp; Mobilisation </span>
+        <span class="donate-category__description">
+          Support a particular course or training programme.
+        </span>
+      </button>
+    </div>
+
+    <div class="donate-form-card">
+      <div class="donate-form-card__heading">
+        <span class="section-label">DONATION DETAILS</span>
+        <h2>Complete Your Donation</h2>
+        <p>Choose the specific item you want to support and enter your donation details below.</p>
+      </div>
+
+      <form #donationForm="ngForm" (ngSubmit)="startPayment(donationForm)">
+        <div class="form-group">
+          <label for="donationItem"> Select Specific Mission / Programme </label>
+
+          <select
+            id="donationItem"
+            name="donationItem"
+            [(ngModel)]="selectedItemId"
+            (ngModelChange)="onItemChange()"
+            required
+            [disabled]="!selectedCategory || availableItems.length === 0"
+          >
+            <option value="" disabled>
+              @if (!selectedCategory) {
+                Select a category first
+              } @else {
+                Select a specific item
+              }
+            </option>
+
+            @for (item of availableItems; track item.id) {
+              <option [value]="item.id">{{ item.name }}</option>
+            }
+          </select>
+
+          @if (selectedItem) {
+            <small class="field-description">
+              {{ selectedItem.description }}
+            </small>
+          } @else if (selectedCategory && availableItems.length === 0) {
+            <small class="field-description">
+              No items have been added to this category yet. They will appear here when their
+              information is available.
+            </small>
+          }
+        </div>
+
+        <div class="form-group">
+          <label for="donorName">Full Name</label>
+          <input
+            type="text"
+            id="donorName"
+            name="donorName"
+            [(ngModel)]="donor.name"
+            placeholder="Enter your full name"
+            required
+          />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="donorEmail">Email Address</label>
+            <input
+              type="email"
+              id="donorEmail"
+              name="donorEmail"
+              [(ngModel)]="donor.email"
+              placeholder="Enter your email"
+              required
+              email
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="donorPhone">Phone Number</label>
+            <input
+              type="tel"
+              id="donorPhone"
+              name="donorPhone"
+              [(ngModel)]="donor.phone"
+              placeholder="Enter your phone number"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="donationAmount">Donation Amount (₦)</label>
+          <div class="amount-input">
+            <span>₦</span>
+            <input
+              type="number"
+              id="donationAmount"
+              name="donationAmount"
+              [(ngModel)]="donor.amount"
+              placeholder="Enter amount"
+              min="100"
+              step="1"
+              required
+            />
+          </div>
+          <small class="field-description"> Minimum donation: ₦100 </small>
+        </div>
+
+        @if (paymentMessage) {
+          <div
+            class="payment-feedback"
+            [class.payment-feedback--success]="paymentStatus === 'success'"
+            [class.payment-feedback--error]="paymentStatus === 'error'"
+            [class.payment-feedback--cancelled]="paymentStatus === 'cancelled'"
+            role="status"
+          >
+            {{ paymentMessage }}
+          </div>
+        }
+
+        <button
+          type="submit"
+          class="donate-submit"
+          [disabled]="isProcessing || !selectedCategory || !selectedItem"
+        >
+          @if (isProcessing) {
+            Processing...
+          } @else {
+            Proceed to Paystack
+          }
+        </button>
+
+        <p class="payment-note">
+          <i class="pi pi-lock"></i>
+          Payments are processed securely through Paystack.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>

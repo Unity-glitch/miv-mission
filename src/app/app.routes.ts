@@ -32,8 +32,18 @@ export const routes: Routes = [
       },
       {
         path: 'contact',
+        loadComponent: () => import('./pages/contact/contact').then((m) => m.Contact),
+      },
+      {
+        path: 'donate',
+        loadComponent: () => import('./pages/donate/donate').then((m) => m.Donate),
+      },
+      {
+        path: 'training-mobilisation',
         loadComponent: () =>
-          import('./pages/contact/contact').then((m) => m.Contact),
+          import('./pages/training-mobilisation/training-mobilisation').then(
+            (m) => m.TrainingMobilisation,
+          ),
       },
     ],
   },
