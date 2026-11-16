@@ -17,14 +17,13 @@
 .mission-list__heading h2 {
   margin: 0 0 18px;
   color: #343639;
-  font-family: 'Montserrat', sans-serif;
   font-size: clamp(28px, 3.5vw, 42px);
   font-weight: 800;
   line-height: 1.3;
 }
 
 .mission-list__heading h2 span {
-  color: #317e3d;
+  color: var(--primary-color);
 }
 
 .mission-list__results {
@@ -177,7 +176,7 @@
 }
 
 .section-label {
-  color: #317e3d;
+  color: var(--primary-color);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -185,10 +184,10 @@
 
 .clear-filters {
   padding: 11px 18px;
-  border: 1px solid #317e3d;
+  border: 1px solid var(--primary-color);
   border-radius: 6px;
   background: transparent;
-  color: #317e3d;
+  color: var(--primary-color);
   font-family: inherit;
   font-weight: 600;
   cursor: pointer;
