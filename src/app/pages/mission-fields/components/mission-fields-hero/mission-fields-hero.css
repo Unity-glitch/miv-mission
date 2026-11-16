@@ -53,10 +53,6 @@
   line-height: 1.2;
 }
 
-.mission-hero__content h1 span {
-  display: block;
-  color: #9ed3a3;
-}
 
 .mission-hero__content > p {
   max-width: 580px;

@@ -1,5 +1,5 @@
 .mission-about {
-  padding: 100px 6%;
+  padding: 100px 5%;
   background: #fff;
 }
 
@@ -14,7 +14,7 @@
 
 .mission-about__image {
   position: relative;
-  height: 520px;
+  height: 50vh;
   border-radius: 14px;
   overflow: hidden;
 }
@@ -46,11 +46,11 @@
 .mission-about__content{
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 12px;
 }
 
 .mission-about__content .section-label {
-  color: #f3951f;
+  color: var(--primary-color);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -90,7 +90,7 @@
 
 @media (max-width: 900px) {
   .mission-about {
-    padding: 75px 5%;
+    padding: 120px 5%;
   }
 
   .mission-about__container {
@@ -99,20 +99,27 @@
   }
 
   .mission-about__image {
-    height: 420px;
+    height: 100vh;
   }
 }
 
 @media (max-width: 576px) {
   .mission-about {
-    padding: 60px 5%;
+    padding: 120px 5%;
   }
 
   .mission-about__image {
-    height: 300px;
+    height: 50vh;
   }
 
   .mission-about__content h2 {
+    text-align: center;
     font-size: 28px;
+  }
+  .mission-about__content span{
+    text-align: center;
+  }
+  .mission-about__content .section-label{
+    text-align: center;
   }
 }

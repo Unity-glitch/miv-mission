@@ -1,6 +1,6 @@
 .mission-detail-hero {
   position: relative;
-  min-height: 600px;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -46,13 +46,6 @@
   transition: color 0.3s ease;
 }
 
-.mission-detail-hero__breadcrumb a:hover {
-  color: #f3951f;
-}
-
-.mission-detail-hero__breadcrumb span:last-child {
-  color: #f3951f;
-}
 
 .mission-detail-hero__content {
   max-width: 720px;
@@ -61,7 +54,7 @@
 .mission-detail-hero__label {
   display: inline-block;
   margin-bottom: 18px;
-  color: #f3951f;
+  color: #fff;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -75,10 +68,6 @@
   line-height: 1.15;
 }
 
-.mission-detail-hero__content h1 span {
-  display: block;
-  color: #f3951f;
-}
 
 .mission-detail-hero__content > p {
   max-width: 620px;
@@ -137,7 +126,7 @@
     justify-content: center;
   }
   .mission-detail-hero {
-    min-height: 570px;
+    min-height: 100vh;
   }
 
   .mission-detail-hero__container {
@@ -161,7 +150,7 @@
 
 @media (max-width: 480px) {
   .mission-detail-hero {
-    min-height: 590px;
+    min-height: 100vh;
   }
 
   .mission-detail-hero__actions {
