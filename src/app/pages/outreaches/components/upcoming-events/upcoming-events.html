@@ -57,3 +57,10 @@
     }
   </div>
 </section>
+@for (event of events; track event.id) {
+  <app-notification-reminder
+    [itemId]="event.id"
+    [itemName]="event.title"
+    category="Event"
+  ></app-notification-reminder>
+}

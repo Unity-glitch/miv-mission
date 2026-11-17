@@ -27,8 +27,14 @@
       </button>
 
       @if (!submitted) {
-        <div class="notification-modal__icon">🔔</div>
-
+        <div class="miv__logo">
+          <app-logo
+            [width]="'60px'"
+            [height]="'60px'"
+            [showBlueText]="false"
+            [showWhiteText]="false"
+          ></app-logo>
+        </div>
         <div class="notification-modal__header">
           <span class="section-label">STAY UPDATED</span>
           <h2 id="notification-title">Turn on notifications?</h2>

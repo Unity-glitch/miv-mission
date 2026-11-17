@@ -1,5 +1,17 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  HostListener,
+  inject,
+  Input,
+  OnDestroy,
+  OnInit,
+  Output,
+} from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { Logo } from '../logo/logo';
 
 export interface NotificationSubscription {
   name: string;
@@ -15,11 +27,14 @@ export interface NotificationSubscription {
 @Component({
   selector: 'app-notification-reminder',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, Logo],
   templateUrl: './notification-reminder.html',
   styleUrl: './notification-reminder.css',
 })
-export class NotificationReminder {
+export class NotificationReminder implements OnInit, OnDestroy {
+  private host = inject<ElementRef<HTMLElement>>(ElementRef);
+  private document = inject(DOCUMENT);
+
   @Input({ required: true }) itemId!: string;
   @Input({ required: true }) itemName!: string;
   @Input({ required: true }) category!: string;
@@ -38,14 +53,34 @@ export class NotificationReminder {
     notifyBySms: true,
   };
 
+  ngOnInit(): void {
+    // Move this component to <body> so position: fixed is relative to the
+    // screen, not to a parent with transform/opacity (e.g. appScrollReveal)
+    this.document.body.appendChild(this.host.nativeElement);
+  }
+
+  ngOnDestroy(): void {
+    this.document.body.style.overflow = '';
+    this.host.nativeElement.remove();
+  }
+
+  @HostListener('document:keydown.escape')
+  onEscape(): void {
+    if (this.showModal) {
+      this.closeModal();
+    }
+  }
+
   openModal(): void {
     this.showModal = true;
     this.submitted = false;
     this.errorMessage = '';
+    this.document.body.style.overflow = 'hidden'; // stop page scrolling behind modal
   }
 
   closeModal(): void {
     this.showModal = false;
+    this.document.body.style.overflow = '';
   }
 
   submitNotification(form: NgForm): void {
