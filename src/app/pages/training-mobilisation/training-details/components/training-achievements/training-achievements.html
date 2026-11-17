@@ -1,1 +1,35 @@
-<p>training-achievements works!</p>
+<section class="training-achievements">
+  <div class="training-achievements__container">
+    <div class="training-achievements__header" appScrollReveal>
+      <span class="section-label">THE IMPACT WE ARE MAKING</span>
+
+      <h2>
+        Our Programme
+        <span>Achievements.</span>
+      </h2>
+
+      <p>
+        Every milestone represents lives equipped, knowledge shared, and progress made towards
+        fulfilling the mission.
+      </p>
+    </div>
+
+    @if (course.achievements.length > 0) {
+      <div class="training-achievements__grid">
+        @for (achievement of course.achievements; track achievement) {
+          <div class="achievement-card" appScrollReveal>
+            <span class="achievement-card__icon">
+              <i class="pi pi-check-circle">✓</i>
+            </span>
+
+            <p>{{ achievement }}</p>
+          </div>
+        }
+      </div>
+    } @else {
+      <div class="training-achievements__empty">
+        <p>Programme achievements will be added as milestones are recorded.</p>
+      </div>
+    }
+  </div>
+</section>

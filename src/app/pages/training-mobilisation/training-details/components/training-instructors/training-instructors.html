@@ -1,1 +1,38 @@
-<p>training-instructors works!</p>
+<section class="training-instructors">
+  <div class="training-instructors__container">
+    <div class="training-instructors__header" appScrollReveal>
+      <span class="section-label">MEET THE TEAM</span>
+
+      <h2>
+        Our Course
+        <span>Instructors.</span>
+      </h2>
+
+      <p>
+        Meet the individuals responsible for guiding, teaching, and equipping participants
+        throughout this programme.
+      </p>
+    </div>
+
+    @if (course.instructors.length > 0) {
+      <div class="training-instructors__grid">
+        @for (instructor of course.instructors; track instructor.name) {
+          <article class="instructor-card" appScrollReveal>
+            <div class="instructor-card__image">
+              <img [src]="instructor.image" [alt]="instructor.name" />
+            </div>
+
+            <div class="instructor-card__content">
+              <h3>{{ instructor.name }}</h3>
+              <p>{{ instructor.role }}</p>
+            </div>
+          </article>
+        }
+      </div>
+    } @else {
+      <div class="training-instructors__empty">
+        <p>Instructor information for this programme will be announced soon.</p>
+      </div>
+    }
+  </div>
+</section>

@@ -43,9 +43,49 @@ export class TrainingDataService {
         'Build practical missionary and evangelism skills.',
         'Prepare participants for effective community engagement.',
       ],
-      instructors: [],
-      pastEvents: [],
-      achievements: [],
+      instructors: [
+        {
+          name: 'Rev. Samson Ajetomobi',
+          role: 'Lead Instructor & Mission Director',
+          image: '/images/Rev Samson.png',
+        },
+        {
+          name: 'Rev. Mrs. Stella Ajetomobi',
+          role: 'Programme Facilitator',
+          image: '/images/Rev Stella.png',
+        },
+      ],
+
+      pastEvents: [
+        {
+          title: 'Missionary Leadership Workshop',
+          date: '15 June 2026',
+          image: '/images/home-img2.jpeg',
+          description:
+            'A practical workshop focused on developing leadership skills and preparing participants for effective missionary service.',
+        },
+        {
+          title: 'Evangelism and Discipleship Seminar',
+          date: '22 August 2026',
+          image: '/images/home-img3.jpeg',
+          description:
+            'An interactive seminar exploring practical approaches to evangelism, discipleship, and community engagement.',
+        },
+        {
+          title: 'Mission Mobilisation Conference',
+          date: '10 October 2026',
+          image: '/images/home-img4.jpeg',
+          description:
+            'A gathering focused on inspiring and equipping participants to take an active role in advancing the mission.',
+        },
+      ],
+      achievements: [
+        'Participants equipped with practical missionary and evangelism skills.',
+        'Improved understanding of biblical leadership and discipleship.',
+        'Increased participation in community outreach activities.',
+        'Stronger collaboration among ministry teams and volunteers.',
+        'Successful completion of the programme by participating learners.',
+      ],
     },
     {
       id: 'leadership-development',
@@ -62,9 +102,49 @@ export class TrainingDataService {
         'Develop effective communication and team-building skills.',
         'Strengthen leadership and decision-making abilities.',
       ],
-      instructors: [],
-      pastEvents: [],
-      achievements: [],
+      instructors: [
+        {
+          name: 'Rev. Samson Ajetomobi',
+          role: 'Lead Instructor & Mission Director',
+          image: '/images/Rev Samson.png',
+        },
+        {
+          name: 'Rev. Mrs. Stella Ajetomobi',
+          role: 'Programme Facilitator',
+          image: '/images/Rev Stella.png',
+        },
+      ],
+
+      pastEvents: [
+        {
+          title: 'Missionary Leadership Workshop',
+          date: '15 June 2026',
+          image: '/images/home-img3.jpeg',
+          description:
+            'A practical workshop focused on developing leadership skills and preparing participants for effective missionary service.',
+        },
+        {
+          title: 'Evangelism and Discipleship Seminar',
+          date: '22 August 2026',
+          image: '/images/home-img2.jpeg',
+          description:
+            'An interactive seminar exploring practical approaches to evangelism, discipleship, and community engagement.',
+        },
+        {
+          title: 'Mission Mobilisation Conference',
+          date: '10 October 2026',
+          image: '/images/home-img1.jpeg',
+          description:
+            'A gathering focused on inspiring and equipping participants to take an active role in advancing the mission.',
+        },
+      ],
+      achievements: [
+        'Participants equipped with practical missionary and evangelism skills.',
+        'Improved understanding of biblical leadership and discipleship.',
+        'Increased participation in community outreach activities.',
+        'Stronger collaboration among ministry teams and volunteers.',
+        'Successful completion of the programme by participating learners.',
+      ],
     },
     {
       id: 'evangelism-outreach',
@@ -81,9 +161,49 @@ export class TrainingDataService {
         'Develop confidence in sharing the Gospel.',
         'Learn practical approaches to community outreach.',
       ],
-      instructors: [],
-      pastEvents: [],
-      achievements: [],
+      instructors: [
+        {
+          name: 'Rev. Samson Ajetomobi',
+          role: 'Lead Instructor & Mission Director',
+          image: '/images/Rev Samson.png',
+        },
+        {
+          name: 'Rev. Mrs. Stella Ajetomobi',
+          role: 'Programme Facilitator',
+          image: '/images/Rev Stella.png',
+        },
+      ],
+
+      pastEvents: [
+        {
+          title: 'Missionary Leadership Workshop',
+          date: '15 June 2026',
+          image: '/images/home-img4.jpeg',
+          description:
+            'A practical workshop focused on developing leadership skills and preparing participants for effective missionary service.',
+        },
+        {
+          title: 'Evangelism and Discipleship Seminar',
+          date: '22 August 2026',
+          image: '/images/home-img3.jpeg',
+          description:
+            'An interactive seminar exploring practical approaches to evangelism, discipleship, and community engagement.',
+        },
+        {
+          title: 'Mission Mobilisation Conference',
+          date: '10 October 2026',
+          image: '/images/home-img2.jpeg',
+          description:
+            'A gathering focused on inspiring and equipping participants to take an active role in advancing the mission.',
+        },
+      ],
+      achievements: [
+        'Participants equipped with practical missionary and evangelism skills.',
+        'Improved understanding of biblical leadership and discipleship.',
+        'Increased participation in community outreach activities.',
+        'Stronger collaboration among ministry teams and volunteers.',
+        'Successful completion of the programme by participating learners.',
+      ],
     },
   ];
 

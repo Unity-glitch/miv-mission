@@ -1,1 +1,43 @@
-<p>training-past-events works!</p>
+<section class="training-past-events">
+  <div class="training-past-events__container">
+    <div class="training-past-events__header" appScrollReveal>
+      <span class="section-label">OUR JOURNEY SO FAR</span>
+
+      <h2>
+        Past Training
+        <span>Events.</span>
+      </h2>
+
+      <p>
+        Take a look at previous sessions, workshops, and activities organised as part of this
+        programme.
+      </p>
+    </div>
+
+    @if (course.pastEvents.length > 0) {
+      <div class="training-past-events__grid">
+        @for (event of course.pastEvents; track event.title) {
+          <article class="past-event-card" appScrollReveal>
+            <div class="past-event-card__image">
+              <img [src]="event.image" [alt]="event.title" />
+            </div>
+
+            <div class="past-event-card__content">
+              <span class="past-event-card__date">
+                {{ event.date }}
+              </span>
+
+              <h3>{{ event.title }}</h3>
+
+              <p>{{ event.description }}</p>
+            </div>
+          </article>
+        }
+      </div>
+    } @else {
+      <div class="training-past-events__empty">
+        <p>Past event information for this programme will be updated soon.</p>
+      </div>
+    }
+  </div>
+</section>
