@@ -1,0 +1,19 @@
+@if (course) {
+  <app-training-detail-hero [course]="course"></app-training-detail-hero>
+
+  <app-training-detail-about [course]="course"></app-training-detail-about>
+
+  <!-- <app-training-instructors [course]="course"></app-training-instructors> -->
+
+  <!-- <app-training-past-events [course]="course"></app-training-past-events> -->
+
+  <!-- <app-training-achievements [course]="course"></app-training-achievements> -->
+} @else {
+  <section class="training-not-found">
+    <div>
+      <h2>Programme Not Found</h2>
+      <p>The training programme you are looking for could not be found.</p>
+      <a routerLink="/training-mobilisation">Back to Training Programmes</a>
+    </div>
+  </section>
+}

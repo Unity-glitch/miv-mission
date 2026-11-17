@@ -1,0 +1,36 @@
+<section class="training-detail-about" id="course-about">
+  <div class="training-detail-about__container">
+    <div class="training-detail-about__content" appScrollReveal>
+      <span class="section-label">ABOUT THE PROGRAMME</span>
+
+      <h2>
+        Discover What This
+        <span>Programme Offers.</span>
+      </h2>
+
+      <p>{{ course.about }}</p>
+
+      <div class="training-detail-about__objectives">
+        <h3>What You Will Gain</h3>
+
+        <ul>
+          @for (objective of course.objectives; track objective) {
+            <li>
+              <span class="training-detail-about__check">✓</span>
+              <span>{{ objective }}</span>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+
+    <div class="training-detail-about__image" appScrollReveal>
+      <img [src]="course.image" [alt]="course.title" />
+
+      <div class="training-detail-about__image-label">
+        <span>{{ course.category }}</span>
+        <h3>{{ course.title }}</h3>
+      </div>
+    </div>
+  </div>
+</section>

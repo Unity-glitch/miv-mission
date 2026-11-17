@@ -45,6 +45,20 @@ export const routes: Routes = [
             (m) => m.TrainingMobilisation,
           ),
       },
+      {
+        path: 'training-mobilisation',
+        loadComponent: () =>
+          import('./pages/training-mobilisation/training-mobilisation').then(
+            (m) => m.TrainingMobilisation,
+          ),
+      },
+      {
+        path: 'training-mobilisation/:id',
+        loadComponent: () =>
+          import('./pages/training-mobilisation/training-details/training-details').then(
+            (m) => m.TrainingDetails,
+          ),
+      },
     ],
   },
 ];

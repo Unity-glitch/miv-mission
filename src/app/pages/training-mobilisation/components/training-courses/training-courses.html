@@ -1,1 +1,53 @@
-<p>training-courses works!</p>
+<section class="training-courses" id="training-courses">
+  <div class="training-courses__container">
+    <div class="training-courses__header" appScrollReveal>
+      <span class="section-label">LEARN AND GROW</span>
+
+      <h2>
+        Explore Our
+        <span>Training Programmes.</span>
+      </h2>
+
+      <p>
+        Discover learning opportunities designed to equip, develop, and prepare people for
+        meaningful service and effective ministry.
+      </p>
+    </div>
+
+    @if (courses.length > 0) {
+      <div class="training-courses__grid">
+        @for (course of courses; track course.id) {
+          <article class="training-course-card" appScrollReveal>
+            <div class="training-course-card__image">
+              <img [src]="course.image" [alt]="course.title" />
+              <span class="training-course-card__category">
+                {{ course.category }}
+              </span>
+            </div>
+
+            <div class="training-course-card__content">
+              <span class="training-course-card__duration">
+                {{ course.duration }}
+              </span>
+
+              <h3>{{ course.title }}</h3>
+
+              <p>{{ course.description }}</p>
+
+              <a
+                [routerLink]="['/training-mobilisation', course.id]"
+                class="training-course-card__link"
+              >
+                View Programme
+              </a>
+            </div>
+          </article>
+        }
+      </div>
+    } @else {
+      <div class="training-courses__empty">
+        <p>There are currently no training programmes available.</p>
+      </div>
+    }
+  </div>
+</section>

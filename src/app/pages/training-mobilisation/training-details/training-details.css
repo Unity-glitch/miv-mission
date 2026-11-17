@@ -1,0 +1,42 @@
+.training-not-found {
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background: #f6f6f6;
+  text-align: center;
+}
+
+.training-not-found h2 {
+  margin: 0 0 15px;
+  color: #343639;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+}
+
+.training-not-found p {
+  margin: 0 0 25px;
+  color: #707070;
+  line-height: 1.8;
+}
+
+.training-not-found a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 22px;
+  border-radius: 4px;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.training-not-found a:hover {
+  background: #fff;
+  color: var(--primary-color);
+  outline: 1px solid var(--primary-color);
+}
