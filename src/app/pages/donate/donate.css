@@ -43,7 +43,7 @@
 .section-label {
   display: inline-block;
   margin-bottom: 15px;
-  color: #f3951f;
+  color: #fff;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -51,15 +51,14 @@
 
 .donate-hero h1 {
   margin: 0 auto 20px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(35px, 5vw, 58px);
+  font-size: clamp(36px, 5vw, 58px);
   font-weight: 800;
   line-height: 1.2;
 }
 
 .donate-hero h1 span {
   display: block;
-  color: #f3951f;
+  color: #fff;
 }
 
 .donate-hero p {
@@ -360,7 +359,7 @@
 
 @media (max-width: 480px) {
   .donate-hero h1 {
-    font-size: 34px;
+    font-size: 28px;
   }
 
   .donate-hero p {
