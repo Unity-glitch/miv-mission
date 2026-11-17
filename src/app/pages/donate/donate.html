@@ -38,7 +38,12 @@
         (click)="selectedCategory = 'mission-field'; onCategoryChange()"
       >
         <span class="donate-category__icon">
-          <i class="pi pi-globe"></i>
+          <app-logo
+            [width]="'28px'"
+            [height]="'28px'"
+            [showWhiteText]="false"
+            [showBlueText]="false"
+          ></app-logo>
         </span>
         <span class="donate-category__title">Mission Fields</span>
         <span class="donate-category__description"> Support a particular mission field. </span>
@@ -51,7 +56,12 @@
         (click)="selectedCategory = 'outreach'; onCategoryChange()"
       >
         <span class="donate-category__icon">
-          <i class="pi pi-heart"></i>
+          <app-logo
+            [width]="'28px'"
+            [height]="'28px'"
+            [showWhiteText]="false"
+            [showBlueText]="false"
+          ></app-logo>
         </span>
         <span class="donate-category__title">Outreaches</span>
         <span class="donate-category__description">
@@ -66,7 +76,12 @@
         (click)="selectedCategory = 'training'; onCategoryChange()"
       >
         <span class="donate-category__icon">
-          <i class="pi pi-book"></i>
+          <app-logo
+            [width]="'28px'"
+            [height]="'28px'"
+            [showWhiteText]="false"
+            [showBlueText]="false"
+          ></app-logo>
         </span>
         <span class="donate-category__title"> Training &amp; Mobilisation </span>
         <span class="donate-category__description">

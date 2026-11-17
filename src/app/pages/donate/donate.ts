@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 import { MissionFieldDataService } from '../mission-fields/mission-field-data';
 import { PaystackService } from './paystack';
 import { CommonModule } from '@angular/common';
+import { Logo } from '../../shared/logo/logo';
 
 type DonationCategory = 'mission-field' | 'outreach' | 'training';
 
@@ -16,7 +17,7 @@ interface DonationItem {
 @Component({
   selector: 'app-donate',
   standalone: true,
-  imports: [FormsModule, RouterLink, CommonModule, ReactiveFormsModule],
+  imports: [FormsModule, RouterLink, CommonModule, ReactiveFormsModule, Logo],
   templateUrl: './donate.html',
   styleUrl: './donate.css',
 })
