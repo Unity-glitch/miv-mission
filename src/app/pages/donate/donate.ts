@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { MissionFieldDataService } from '../mission-fields/mission-field-data';
@@ -20,6 +20,7 @@ interface DonationItem {
   imports: [FormsModule, RouterLink, CommonModule, ReactiveFormsModule, Logo],
   templateUrl: './donate.html',
   styleUrl: './donate.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class Donate {
   private missionFieldDataService = inject(MissionFieldDataService);
