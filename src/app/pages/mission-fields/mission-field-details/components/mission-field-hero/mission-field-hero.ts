@@ -2,11 +2,12 @@ import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ScrollReveal } from '../../../../../shared/scroll-reveal';
 import { MissionField } from '../../../mission-field-data';
+import { NotificationReminder } from '../../../../../shared/notification-reminder/notification-reminder';
 
 @Component({
   selector: 'app-mission-field-hero',
   standalone: true,
-  imports: [RouterLink, ScrollReveal],
+  imports: [RouterLink, ScrollReveal, NotificationReminder],
   templateUrl: './mission-field-hero.html',
   styleUrl: './mission-field-hero.css',
 })

@@ -13,7 +13,7 @@
     <div class="mission-detail-hero__content" appScrollReveal>
       <span class="mission-detail-hero__label">OUR MISSION FIELDS</span>
 
-      <h1>  
+      <h1>
         {{ field.name }}
         <span>{{ field.location }}</span>
       </h1>
@@ -26,6 +26,12 @@
         <a href="#mission-about" class="hero-btn hero-btn--primary"> Discover This Mission </a>
 
         <a routerLink="/donate" class="hero-btn hero-btn--outline"> Support This Mission </a>
+
+        <!-- <app-notification-reminder
+          [itemId]="field.id"
+          [itemName]="field.name"
+          category="Mission Field"
+        ></app-notification-reminder> -->
       </div>
     </div>
   </div>

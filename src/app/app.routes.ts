@@ -59,6 +59,10 @@ export const routes: Routes = [
             (m) => m.TrainingDetails,
           ),
       },
+      {
+        path: 'outreaches',
+        loadComponent: () => import('./pages/outreaches/outreaches').then((m) => m.Outreaches),
+      },
     ],
   },
 ];

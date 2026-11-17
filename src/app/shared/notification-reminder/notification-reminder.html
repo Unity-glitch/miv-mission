@@ -1,0 +1,143 @@
+<button
+  type="button"
+  class="notification-trigger"
+  (click)="openModal()"
+  aria-label="Turn on notifications"
+  title="Get notifications about this item"
+>
+  🔔
+</button>
+
+@if (showModal) {
+  <div class="notification-modal__backdrop" (click)="closeModal()">
+    <div
+      class="notification-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="notification-title"
+      (click)="$event.stopPropagation()"
+    >
+      <button
+        type="button"
+        class="notification-modal__close"
+        (click)="closeModal()"
+        aria-label="Close"
+      >
+        ✕
+      </button>
+
+      @if (!submitted) {
+        <div class="notification-modal__icon">🔔</div>
+
+        <div class="notification-modal__header">
+          <span class="section-label">STAY UPDATED</span>
+          <h2 id="notification-title">Turn on notifications?</h2>
+          <p>Get reminders and important updates about this programme or event.</p>
+        </div>
+
+        <div class="notification-modal__item">
+          <span>NOTIFICATIONS FOR</span>
+          <h3>{{ itemName }}</h3>
+          <small>{{ category }}</small>
+        </div>
+
+        <form #notificationForm="ngForm" (ngSubmit)="submitNotification(notificationForm)">
+          <div class="notification-form__group">
+            <label for="notification-name">Full Name</label>
+            <input
+              id="notification-name"
+              type="text"
+              name="name"
+              [(ngModel)]="subscriber.name"
+              placeholder="Enter your full name"
+              required
+              #name="ngModel"
+            />
+            @if (name.invalid && name.touched) {
+              <small class="field-error">Please enter your name.</small>
+            }
+          </div>
+
+          <div class="notification-form__group">
+            <label for="notification-email">Email Address</label>
+            <input
+              id="notification-email"
+              type="email"
+              name="email"
+              [(ngModel)]="subscriber.email"
+              placeholder="Enter your email address"
+              required
+              email
+              #email="ngModel"
+            />
+            @if (email.invalid && email.touched) {
+              <small class="field-error">Enter a valid email address.</small>
+            }
+          </div>
+
+          <div class="notification-form__group">
+            <label for="notification-phone">Phone Number</label>
+            <input
+              id="notification-phone"
+              type="tel"
+              name="phone"
+              [(ngModel)]="subscriber.phone"
+              placeholder="e.g. 08012345678"
+              required
+              minlength="10"
+              #phone="ngModel"
+            />
+            @if (phone.invalid && phone.touched) {
+              <small class="field-error">Enter a valid phone number.</small>
+            }
+          </div>
+
+          <div class="notification-form__methods">
+            <label>How would you like to be notified?</label>
+
+            <label class="notification-checkbox">
+              <input type="checkbox" name="notifyByEmail" [(ngModel)]="subscriber.notifyByEmail" />
+              <span> ✉ Email reminders </span>
+            </label>
+
+            <label class="notification-checkbox">
+              <input type="checkbox" name="notifyBySms" [(ngModel)]="subscriber.notifyBySms" />
+              <span> ☎ SMS reminders </span>
+            </label>
+          </div>
+
+          @if (errorMessage) {
+            <p class="notification-error" role="alert">
+              {{ errorMessage }}
+            </p>
+          }
+
+          <button type="submit" class="notification-submit" [disabled]="notificationForm.invalid">
+            Turn On Notifications
+          </button>
+
+          <p class="notification-privacy">
+            Your contact details will be used for updates about this item.
+          </p>
+        </form>
+      } @else {
+        <div class="notification-success" role="status">
+          <div class="notification-success__icon">✓</div>
+
+          <h2>Thank You!</h2>
+
+          <p>
+            Your notification preferences for
+            <strong>{{ itemName }}</strong> have been selected.
+          </p>
+
+          <p class="notification-success__note">
+            Reminder delivery will be available once the notification service is connected.
+          </p>
+
+          <button type="button" class="notification-submit" (click)="closeSuccess()">Done</button>
+        </div>
+      }
+    </div>
+  </div>
+}

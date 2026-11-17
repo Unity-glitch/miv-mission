@@ -1,0 +1,170 @@
+.outreaches-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: url('/images/home-img1.jpeg') center/cover no-repeat;
+  color: #fff;
+}
+
+.outreaches-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.45));
+}
+
+.outreaches-hero__container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 25px 30px;
+}
+
+.outreaches-hero__breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 65px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.outreaches-hero__breadcrumb a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.outreaches-hero__content {
+  max-width: 720px;
+}
+
+.outreaches-hero__label {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.outreaches-hero__content h1 {
+  margin: 0 0 22px;
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.outreaches-hero__content p {
+  max-width: 620px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.outreaches-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.outreaches-hero__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 25px;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.outreaches-hero__button--primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.outreaches-hero__button--primary:hover {
+  background: var(--hover-color-dark);
+  color: #fff;
+}
+
+.outreaches-hero__button--outline {
+  background: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+.outreaches-hero__button--outline:hover {
+  background: #fff;
+  color: var(--primary-color);
+  border-color: #fff;
+}
+
+.outreaches-hero__bottom {
+  margin-top: 85px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .outreaches-hero {
+    min-height: 100vh;
+  }
+
+  .outreaches-hero__container {
+    padding: 90px 20px 45px;
+  }
+
+  .outreaches-hero__breadcrumb {
+    margin-bottom: 55px;
+    justify-content: center;
+  }
+
+  .outreaches-hero__content {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .outreaches-hero__content h1{
+    font-size: 28px;
+  }
+
+  .outreaches-hero__content p {
+    margin: 0 auto;
+  }
+
+  .outreaches-hero__actions {
+    justify-content: center;
+  }
+
+  .outreaches-hero__bottom {
+    margin-top: 65px;
+    text-align: center;
+    line-height: 1.8;
+  }
+  .outreaches-hero__button{
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .outreaches-hero__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .outreaches-hero__button {
+    width: 100%;
+  }
+}

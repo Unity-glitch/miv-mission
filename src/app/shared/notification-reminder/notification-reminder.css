@@ -1,0 +1,50 @@
+:host {
+  position: fixed !important;
+  right: 20px !important;
+  bottom: 25px !important;
+  z-index: 999999 !important;
+
+  display: block;
+  width: 52px;
+  height: 52px;
+}
+
+.notification-trigger {
+  position: static !important;
+
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  border: 2px solid #fff;
+  border-radius: 50%;
+
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 24px;
+
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.notification-trigger:hover {
+  transform: scale(1.08);
+}
+
+@media (max-width: 480px) {
+  :host {
+    right: 16px !important;
+    bottom: 20px !important;
+    width: 48px;
+    height: 48px;
+  }
+
+  .notification-trigger {
+    width: 48px;
+    height: 48px;
+  }
+}

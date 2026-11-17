@@ -1,0 +1,37 @@
+<section class="outreach-activities">
+  <div class="outreach-activities__container">
+    <div class="outreach-activities__header" appScrollReveal>
+      <span class="section-label">REACHING BEYOND BOUNDARIES</span>
+
+      <h2>
+        Different Ways We
+        <span>Reach Communities.</span>
+      </h2>
+
+      <p>
+        Our outreach efforts create opportunities to share the Gospel, serve people, and encourage
+        more individuals to participate in fulfilling the mission.
+      </p>
+    </div>
+
+    <div class="outreach-activities__grid">
+      @for (activity of activities; track activity.number) {
+        <article class="outreach-card" appScrollReveal>
+          <div class="outreach-card__image">
+            <img [src]="activity.image" [alt]="activity.title" />
+            <span class="outreach-card__number">
+              {{ activity.number }}
+            </span>
+          </div>
+
+          <div class="outreach-card__content">
+            <h3>{{ activity.title }}</h3>
+            <p>{{ activity.description }}</p>
+
+            <a routerLink="/contact" class="outreach-card__link"> Enquire About This Outreach </a>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
