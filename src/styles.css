@@ -526,7 +526,16 @@ p {
   color: #ffffff;
   cursor: pointer;
 }
-
+.grouped {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.grouped span {
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--primary-color);
+}
 .primary-btn:hover {
   background: var(--hover-color-dark);
 }
@@ -604,10 +613,10 @@ p {
     align-items: center;
     justify-content: center;
   }
-  .primary-btn{
+  .primary-btn {
     margin: auto;
   }
-  .secondary-btn{
+  .secondary-btn {
     margin: auto;
   }
 }

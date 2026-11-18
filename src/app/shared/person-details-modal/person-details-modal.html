@@ -1,0 +1,31 @@
+@if (person) {
+  <div class="person-modal__backdrop" (click)="closeModal()">
+    <div
+      class="person-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="person-modal-name"
+      (click)="$event.stopPropagation()"
+    >
+      <button
+        type="button"
+        class="person-modal__close"
+        (click)="closeModal()"
+        aria-label="Close details"
+      >
+        ✕
+      </button>
+
+      <div class="person-modal__image">
+        <img [src]="person.image" [alt]="person.name" />
+      </div>
+
+      <div class="person-modal__content">
+
+        <h2 id="person-modal-name">{{ person.name }}</h2>
+
+        <p>{{ person.role }}</p>
+      </div>
+    </div>
+  </div>
+}

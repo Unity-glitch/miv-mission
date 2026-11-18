@@ -15,7 +15,7 @@
     </div>
 
     <div class="directorate__grid">
-      @for (director of directors; track director.name + director.image) {
+      @for (director of directors; track $index) {
         <article class="director-card" appScrollReveal>
           <div class="director-card__image">
             <img [src]="director.image" [alt]="director.name" />
@@ -23,11 +23,24 @@
 
           <div class="director-card__info">
             <span class="director-card__line"></span>
+
             <h3>{{ director.name }}</h3>
-            <p>{{ director.position }}</p>
+
+            <div class="grouped">
+              <p>{{ director.position }}</p>
+
+              <button type="button" class="person-view-details" (click)="viewDetails(director)">
+                View Details
+              </button>
+            </div>
           </div>
         </article>
       }
     </div>
   </div>
+
+  <app-person-details-modal
+    [person]="selectedPerson"
+    (closed)="closeDetails()"
+  ></app-person-details-modal>
 </section>

@@ -15,7 +15,7 @@
     </div>
 
     <div class="members__grid">
-      @for (member of members; track member.image) {
+      @for (member of members; track $index) {
         <article class="member-card" appScrollReveal>
           <div class="member-card__image">
             <img [src]="member.image" [alt]="member.name" />
@@ -23,10 +23,21 @@
 
           <div class="member-card__info">
             <h3>{{ member.name }}</h3>
-            <p>{{ member.role }}</p>
+
+            <div class="grouped">
+              <p>{{ member.role }}</p>
+              <button type="button" class="person-view-details" (click)="viewDetails(member)">
+                View Details
+              </button>
+            </div>
           </div>
         </article>
       }
     </div>
   </div>
+
+  <app-person-details-modal
+    [person]="selectedPerson"
+    (closed)="closeDetails()"
+  ></app-person-details-modal>
 </section>
