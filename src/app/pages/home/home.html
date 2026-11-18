@@ -5,7 +5,12 @@
       <img src="/images/home-img1.jpeg" alt="MIV Mission outreach and ministry" />
 
       <div appScrollReveal class="image-caption">
-        <span class="caption-icon">✦</span>
+        <app-logo
+          [width]="'40px'"
+          [height]="'40px'"
+          [showBlueText]="false"
+          [showWhiteText]="false"
+        ></app-logo>
         <div>
           <strong>Faith in Action</strong>
           <span>Reaching Lives, Transforming Destinies</span>
@@ -20,10 +25,7 @@
         <span appScrollReveal class="blue-line"></span>
       </div>
 
-      <h2 appScrollReveal>
-        Welcome to
-        <span>MIV Mission</span>
-      </h2>
+      <h2 appScrollReveal>Welcome to MIV Mission</h2>
 
       <p appScrollReveal class="welcome-intro">
         A place where faith comes alive, lives are transformed, and the love of Christ reaches
@@ -111,8 +113,7 @@
       </span>
 
       <h2 appScrollReveal>
-        Making a Difference Through
-        <span>Faith and Service.</span>
+        Making a Difference Through Faith and Service.
       </h2>
 
       <p appScrollReveal>
@@ -142,14 +143,12 @@
         </div>
 
         <div class="card-content">
-          <h3 appScrollReveal>Evangelism</h3>
+          <h3 appScrollReveal>Mission Fields</h3>
           <p appScrollReveal>
             Sharing the good news of Jesus Christ with individuals and communities, reaching hearts
             with the message of salvation and the transforming power of God's love.
           </p>
-          <a routerLink="/mission" class="card-link">
-            Learn More
-          </a>
+          <a routerLink="/mission-fields" class="card-link"> Learn More </a>
         </div>
       </article>
 
@@ -173,14 +172,12 @@
         </div>
 
         <div class="card-content">
-          <h3 appScrollReveal>Discipleship</h3>
+          <h3 appScrollReveal>Outreaches</h3>
           <p appScrollReveal>
             Equipping believers through biblical teaching, prayer and spiritual guidance, helping
             them grow in faith and become committed followers of Jesus Christ.
           </p>
-          <a routerLink="/mission" class="card-link">
-            Learn More
-          </a>
+          <a routerLink="/outreaches" class="card-link"> Learn More </a>
         </div>
       </article>
 
@@ -205,14 +202,12 @@
         </div>
 
         <div class="card-content">
-          <h3 appScrollReveal>Community Outreach</h3>
+          <h3 appScrollReveal>Training</h3>
           <p appScrollReveal>
             Demonstrating the love of Christ through acts of kindness, compassion and practical
             support that bring hope and encouragement to people in need.
           </p>
-          <a routerLink="/mission" class="card-link">
-            Learn More
-          </a>
+          <a routerLink="/training-mobilisation" class="card-link"> Learn More </a>
         </div>
       </article>
 
@@ -240,9 +235,7 @@
             Encouraging a deeper relationship with God through prayer, worship and the study of His
             Word, building a strong foundation for a life of faith.
           </p>
-          <a routerLink="/mission" class="card-link">
-            Learn More
-          </a>
+          <a routerLink="/mission" class="card-link"> Learn More </a>
         </div>
       </article>
     </div>

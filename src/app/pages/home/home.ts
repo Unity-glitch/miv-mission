@@ -5,14 +5,23 @@ import { UpcomingEvents } from './components/upcoming-events/upcoming-events';
 import { ScriptureSection } from './components/scripture-section/scripture-section';
 import { GetInvolved } from './components/get-involved/get-involved';
 import { Newsletter } from './components/newsletter/newsletter';
+import { RouterLink } from '@angular/router';
+import { Logo } from '../../shared/logo/logo';
 
 @Component({
   selector: 'app-home',
-  imports: [HeroSection, ScrollReveal, UpcomingEvents, ScriptureSection, GetInvolved, Newsletter],
+  imports: [
+    HeroSection,
+    ScrollReveal,
+    UpcomingEvents,
+    ScriptureSection,
+    GetInvolved,
+    Newsletter,
+    RouterLink,
+    Logo
+],
   templateUrl: './home.html',
   styleUrl: './home.css',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class Home {
-
-}
+export class Home {}
