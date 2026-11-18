@@ -115,8 +115,8 @@
 }
 
 .prayer-modal__close:hover {
-  background: #e4eee5;
-  color: #317e3d;
+  background: var(--primary-color);
+  color: #fff;
 }
 
 .prayer-modal__header {
@@ -191,6 +191,9 @@
   transition:
     border-color 0.3s ease,
     box-shadow 0.3s ease;
+}
+textarea{
+  resize: none;
 }
 
 .prayer-modal__field input {
