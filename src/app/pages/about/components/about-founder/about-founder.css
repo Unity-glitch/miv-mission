@@ -46,6 +46,10 @@
   left: 20px;
   right: 20px;
   bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
   padding: 10px 14px;
   background: var(--primary-color);
   border-radius: 8px;

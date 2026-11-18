@@ -558,7 +558,7 @@ p {
 
 .secondary-btn:hover {
   background: #ffffff;
-  color: var(--hover-color-dark);
+  color: #142c45;
   border-color: #ffffff;
 }
 
