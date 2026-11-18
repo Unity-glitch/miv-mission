@@ -576,6 +576,26 @@ p {
 .backgroundZoom {
   animation: backgroundZoom 12s ease-out both;
 }
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f6f6f6;
+}
+
+::-webkit-scrollbar-thumb {
+  background:var(--primary-color);
+  border-radius: 10px;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) #000;
+}
 @keyframes backgroundZoom {
   from {
     transform: scale(1.2);
